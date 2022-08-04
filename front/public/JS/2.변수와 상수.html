@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		const pi = 3.141592
+		console.log( "pi : " + pi )
+		/* pi = 10	// 상수를 변경하려고 해서 에러
+		console.log( pi ) */
+		let pi2 = 3.141592
+		console.log( "pi2 : " + pi2 )
+		p12 = 10
+		console.log( "pi2변경후 : " + p12 )
+		
+		let 변수1 = 3
+			console.log("변수1의 값 : " + 변수1)
+		변수1 += 2	/* 변수1 = 변수1 + 2 */
+			console.log("변수1의 2를 더한 후 : " + 변수1)
+			
+		let list = ''
+		list += '<ul>' /* list + '<ul>' */
+		list += '<li>Hello</li>'
+		list += '</ul>'
+			console.log(list)
+			
+		document.write(list)
+		
+		let 변수2 = 3
+		console.log( "변수2 : " + 변수2 ) // 3
+		console.log( "변수2 선위증갑 : " + (++변수2) ) // 4	// 증가후에 출력
+		console.log( "변수3 후위증갑 : " + (변수2++) ) // 4 // 출력후에 증가
+		console.log( "변수2:" + 변수2 ) // 5
+		
+		console.log( "변수2:" + (--변수2) ) // 4
+		console.log( "변수2:" + (변수2--) ) // 4
+		console.log( "변수2:" + (변수2) ) // 3
+		// 변수2 = 변수2+1 vs 변수2 += 1 vs 변수2++
+		
+	</script>
+
+</body>
+</html>
