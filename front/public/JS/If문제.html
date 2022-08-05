@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 문제 1,2,3 : 각각 2개 3개 4개를 입력 받고, 더 큰수를 출력
+	문제 4 : 3개의 정수를 입력받아서 오름차순 / 내림차순 출력
+	문제 5 : 4개의 정수를 입력받아서 오름차순 / 내림차순 출력
+	문제 6 : 점수를 입력받아 점수 90점이상 합격 출력 아니면 탈락 출력
+	문제 7 : 점수를 입력받아 점수 90점이상 A등급, 80점이상 B등급, 70점이상 C등금 출력
+	문제 8 : 아이디와 비밀번호 입력받기
+	회원 아이디가 admin 이고 비밀번호가 1234 이면 로그인 성공 아니면 로그인 실패 -->
+
+	<script type="text/javascript">
+	
+	let a = Number(prompt('첫번째 정수를 입력하세요: '))
+	let b = Number(prompt('두번째 정수를 입력하세요: '))
+	let c = Number(prompt('세번째 정수를 입력하세요: '))
+	let d = Number(prompt('네번째 정수를 입력하세요: '))
+	let max = a
+
+	if( max < b ) {max = b}
+	if( max < c ) {max = c}
+	if( max < d ) {max = d}
+	alert( '가장 큰 값은 ' + max )
+	
+	
+	
+	
+	let int1 = Number(prompt('첫번째 정수를 입력하세요: '))
+	let int2 = Number(prompt('두번째 정수를 입력하세요: '))
+	let int3 = Number(prompt('세번째 정수를 입력하세요: '))
+	let int4 = Number(prompt('네번째 정수를 입력하세요: '))
+	
+	let temp = 0
+	if( int1 > int2 ) { // > : 오름차순 < : 내림차순
+		temp = int1
+		int1 = int2
+		int2 = temp
+	}
+	if( int1 > int3 ) {
+		temp = int1
+		int1 = int3 
+		int3 = temp
+	} 
+	if( int1 > int4) {
+		temp = int1
+		int1 = int4
+		int4 = temp
+	}
+	if ( int2 > int3 ) {
+		temp = int2
+		int2 = int3
+		int3 = temp
+	}
+	if ( int2 > int4 ) {
+		temp = int2
+		int2 = int4
+		int4 = temp
+	}
+	if ( int3 > int4 ){
+		temp = int3
+		int3 = int4
+		int4 = temp
+	}
+	alert(int1 + " " + int2 + " " + int3 + " " + int4)
+	
+	
+	
+	const 점수 = Number(prompt('점수 입력 : '))
+	
+	if (점수 >= 90) {
+		alert('A등급')
+	} else if (점수 >= 80) {
+		alert('B등급')
+	} else if (점수 >= 70) {
+		alert('C등급')
+	} else {
+		alert('재시험')
+	}
+	
+	
+	
+	const 아이디 = prompt('아이디 : ')
+	const 비밀번호 = prompt('비밀번호 : ')
+	if( 아이디 == 'admin' ) {
+		if(비밀번호 == '1234') {
+			alert('로그인 성공')
+		} else {
+			alert('[로그인 실패] 비밀번호가 틀렸습니다.')
+		}
+	} else {
+		alert('[로그인 실패] 없는 아이디 입니다.')
+	}
+	
+	</script>
+
+</body>
+</html>

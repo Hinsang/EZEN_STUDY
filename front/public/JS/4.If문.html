@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		if( 273 < 100 ) {
+			alert('273 < 100 -> true')
+		}
+		
+		alert('종료')
+		
+		const date = new Date()
+		const hour = date.getHours()
+		
+		alert('현재날짜 : ' + date)
+		alert('현재 시 : ' + hour)
+		
+		if( hour < 12 ) {
+			alert('오전 입니다.')
+		}
+		if( hour >= 12 ) {
+			alert('오후 입니다.')
+		}
+		
+		if( hour < 12 ) {
+			alert('오전 입니다.')
+		} else {
+			alert('오후 입니다.')
+		}
+		
+		if( hour < 11 ) {
+			alert('아침 먹을 시간입니다.')
+		} else {
+			if( hour < 15 ) {
+				alert('점심 먹을 시간입니다.')
+			} else {
+				alert('저녁 먹을 시간입니다.')
+			}
+		}
+		
+		if (hour < 11) {
+			alert('아침 먹을 시간입니다.')
+		} else if (hour < 15) {
+			alert('점심 먹을 시간입니다.')
+		} else {
+			alert('저녁 먹을 시간입니다.')
+		}
+		
+		// 4
+		const a = Number( prompt('숫자 입력 : ') )
+		if( a > 0 ) { alert('입력한 숫자는 양수입니다.') }
+		else if( a === 0 ) { alert('입력한 숫자는 0입니다.') }
+		else { alert('입력한 숫자는 음수 입니다.')}
+		
+		// 5
+		const b = Number( prompt('숫자 입력 : ') )
+		if( b % 2 == 0 ) { alert('짝수입니다.') }
+		else { alert('홀수입니다.') }
+		
+		// 6
+		const c = Number( prompt('월을 입력하세요 : ') )
+		if (c >= 3 && c <= 5) {
+			alert('봄 입니다.')
+		} else if( c >= 6 && c <= 8 ) {
+			alert('여름 입니다.')
+		} else if( c >= 9 && c <= 11 ) {
+			alert('가을 입니다.')
+		} else {
+			alert('겨울 입니다.')
+		}
+	</script>
+
+</body>
+</html>
