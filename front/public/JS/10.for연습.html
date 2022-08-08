@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		for(let i = 1 ; i<=10 ; i++) {
+			console.log(i)
+		}
+	
+		let sum = 0
+		for(let i = 1 ; i<=10 ; i++) {
+			sum += i
+		}
+		console.log('1부터 10까지 누적합계 : ' + sum)
+		
+		// 1~100 까지 7배수의 누적 합계
+		let sum2 = 0
+		for(let i = 7 ; i<=100 ; i+=7) {
+			sum2 += i
+		}
+		console.log('1부터 100까지 7배수의 누적합계 : ' + sum2)
+		
+		let sum3 = 0
+		for(let i = 1 ; i<=100 ; i++) {
+			if( i%7 == 0 ) {
+				sum3 += i
+			}
+		}
+		console.log('1부터 100까지 7배수의 누적합계 : ' + sum3)
+		
+		// 2의 배수
+		for(let 곱 = 1 ; 곱<=9 ; 곱++){
+			console.log('2 X '+ 곱 +' = '+ (2*곱))
+		}
+		
+		// 구구단. 단 : 2~9, 곱 : 1~9
+		for(let 단 = 2 ; 단<=9 ; 단++) {
+			
+			for(let 곱 = 1 ; 곱<=9 ; 곱++) {
+				console.log(단 + "X" + 곱 + "=" + (단*곱))
+			}
+		}
+		
+	</script>
+
+</body>
+</html>
