@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style type="text/css">
+	
+		.main {
+			border-top: 3px solid black;
+			width: 750px;
+			margin: 80px auto;
+		}
+		.list {
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			border-bottom: 1px solid #eee;
+		}
+		input {
+			width: 500px;
+			height: 30px;
+			margin-bottom: 10px;
+		}
+		.input2 {
+			width: 500px;
+			height: 120px;
+			margin-bottom: 10px;
+		}
+		.line {
+			border-bottom: 1px solid #eee;
+		}
+		.button {
+			width: 100px;
+			height: 30px;
+			float: right;
+			margin-top: 25px;
+			margin-right: 25px;
+		}
+	
+	</style>
+
+</head>
+<body>
+
+	<div class="main">
+		<div class="line">
+			<div class="list">이름</div>홍길동<br />	
+		</div>
+		<div class="line">	
+			<div class="list">제목</div><input type="text"><br />
+		</div>
+		<div class="line">	
+			<div class="list">내용</div><input type="text" class="input2"><br />
+		</div>
+		<div class="line">	
+			<div class="list">첨부파일</div><button>파일 선택</button>선택된 파일 없음<br />
+		</div>
+		<button class="button">저장하기</button><button class="button">목록보기</button>
+	</div>
+
+</body>
+</html>
