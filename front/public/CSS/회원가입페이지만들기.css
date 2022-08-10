@@ -1,3 +1,6 @@
+* {
+	margin: 0 auto;
+}
 .title {
 	background-image: url('../img/naver.JPG');
 	background-repeat: no-repeat;
@@ -12,17 +15,18 @@
 	height: 30px;
 	margin: 0 auto;
 }
-.input {
+.box {
 	display: block;
 	width: 400px;
 	height: 30px;
 	margin: 0 auto;
 }
-.flex {
+.flexed {
 	display: flex;
 	justify-content: center;
+	margin: 0 auto;
 }
-.input2 {
+.box2 {
 	display: block;
 	width: calc(400px / 3);
 	height: 35px;
@@ -39,7 +43,7 @@
 	
 }
 button {
-	display: block;
+	display: inline-block;
 	width: 150px;
 	height: 38px;
 	color: white;
@@ -50,8 +54,8 @@ button {
 	box-sizing: border-box;
 	text-align: center;
 }
-.input3 {
-	display: block;
+.box3 {
+	display: inline-block;
 	width: 250px;
 	height: 35px;
 	margin-right: 5px;

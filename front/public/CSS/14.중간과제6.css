@@ -1,0 +1,93 @@
+*{ 
+	border: solid 1px red;
+}
+
+.hd_top{ background-color: green;}
+.hd_top_menu{
+	width: 1280px;
+	height: 20px;
+	background-color: #eeeeee;
+	margin: 0 auto;
+	text-align: right;
+}
+.hd_sub{
+	width: 1280px;
+	height: 80px;
+	background-color: #eeeeee;
+	margin: 0 auto;
+}
+.hd_logo{
+	width: 250px;
+	height: 80px;
+	float: left;
+}
+.hd_menu{
+	width: 700px;
+	height: 80px;
+	float: left;
+}
+.hd_search{
+	width: 300px;
+	height: 80px;
+	float: left;
+}
+.content{
+	width: 1280px;
+	height : 800px;
+	margin: 0 auto;
+}
+.main_view{
+	width: 1000px;
+	height: 500px;
+	float: left;
+}
+.main_ban{
+	width: 250px;
+	height: 500px;
+	float: right;
+}
+
+ul{ margin: 0px; padding: 0px;}
+
+.box{
+	width: 310px;
+	height: 300px;
+	background-color: orange;
+	float: left;
+}
+.ft_sub{
+	width: 1280px;
+	height: 100px;
+	margin: 0 auto;
+}
+.ft_info{
+	width: 600px;
+	height: 100px;
+	float: left;
+}
+.ft_etc{
+	width: 600px;
+	height: 100px;
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

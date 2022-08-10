@@ -172,7 +172,6 @@
 		// 문제 9
 		let 입력값 = Number(prompt('9. 줄의 갯수를 입력하세요 : '))
 		output = ''
-		output2 = ''
 		for(let i = 0 ; i < 입력값 ; i++) { // 줄수 만큼 열 반복
 			for(let s = 1 ; s < 입력값-i ; s++) { // i만큼 각줄마다 별이 출력되므로 출력되는 별만큼 i를 빼준다.
 				output += ' '
@@ -182,17 +181,17 @@
 			}
 			output += '\n'
 		}
+		
 		for(let i = 0 ; i<입력값 ; i++) {
 			for(let s = 0 ; s<i+1 ; s++) {
 				output += ' '				
 			}
-			for(let s = 0 ; s<(입력값*2)-(i*2) ; s++) {
+			for(let s = 0 ; s<(입력값-1)*2-(i*2+1) ; s++) { // 입력값-1부터 1,3,5,7,9를 뺀다
 				output += '*'
 			}
 			output += '\n'
 		}
-		console.log(output+output2)
-		
+		console.log(output)
 		
 	</script>
 
