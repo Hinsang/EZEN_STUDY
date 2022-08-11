@@ -1,0 +1,201 @@
+/* 기본 세팅 */
+* {
+	padding: 0;
+	margin: 0;
+	/* border: 1px solid red; */
+	font-family: '굴림'
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+ㅁ:hover {
+	color: gray;
+}
+li {
+	list-style-type: none;
+}
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 헤더 */
+
+#header {
+	height: 150px;
+}
+.hd_box {
+	width: 1200px; margin: 0 auto;
+}
+.logobox {
+	float: left;
+	margin: 30px 0 0 30px; 
+}
+.menus {
+	float: right;
+	text-align: right;
+}
+.menus li {
+	display: inline;
+}
+.top_menu {
+	margin: 30px 0;
+}
+.main_menu li a {
+	font-family: "MICEGothic Bold";
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: 100px;
+}
+
+/* 메인이미지 */
+
+#main_img {
+	clear: both;
+	height: 350px;
+	background-image: url("./img/main_bg.png");
+	/* background-size: cover; */
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.sub_img {
+	background-image: url("./img/btn_class.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 200px;
+	height: 50px;
+}
+#content {
+	width: 1200px;
+	margin: 0 auto;
+}
+.sidebar {
+	float: left;
+	width: 250px;
+}
+.sb_title1 {
+	background-color: #0ca9a3;
+	padding: 15px;
+	font-size: 20px;
+	color: white;
+}
+.sb_comment {
+	padding: 15px;
+	line-height: 150%;
+}
+.searchbox {
+	padding: 15px;
+}
+.searchbox input {
+	width: 150px;
+	height: 30px;
+}
+.searchbox button {
+	margin-left: 5px;
+	padding: 7px 10px;
+}
+.sidebar .sb_title2 {
+	border-top: solid 2px black;
+	border-bottom: solid 1px #eeeeee;
+	padding: 15px;
+	font-size: 15px;
+}
+.sidebar .sb_list {
+	padding: 15px;
+}
+.sidebar .sb_list li {
+	padding: 10px;
+}
+
+/* 메인 본문 */
+
+.main_content {
+	float: left;
+	width: 900px;
+}
+.left_main{ 
+	float: left;
+	width: 440px;
+	margin-left: 15px;
+}
+.left_main .main_title{
+	border-bottom: solid 2px black;
+	padding-bottom: 8px;
+}
+.left_main .board_ul {
+	margin: 30px 0px 40px 0px;
+}
+.left_main .board_ul .items {
+	padding-bottom: 40px;
+}
+.items .title {
+	float: left;
+}
+.items .date {
+	float: right;
+}
+
+.right_main {
+	float: right;
+	width: 440px;
+}
+.right_main .main_title {
+	padding-bottom: 8px;
+}
+.right_main .product_ul {
+	float: left;
+	width: 200px;
+	margin-left: 2px;
+}
+
+#footer {
+	clear: both;
+	background-color: #05354e;
+	color: white;
+	height: 300px;
+}
+.ft_box {
+	width: 1200px;
+	margin: 0 auto;
+}
+.ft_menu {
+	padding: 20px;
+	font-weight: bold;
+}
+.ft_menu li {
+	display: inline;
+	margin-right: 30px;
+}
+.ft_box .items {
+	float: left;
+	margin: 20px 50px 20px 20px;
+}
+.ft_item_ul {
+	margin-top: 10px;
+	width: 300px;
+}
+.ft_item_ul li {
+	margin: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
