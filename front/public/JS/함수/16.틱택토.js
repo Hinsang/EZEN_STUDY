@@ -7,12 +7,14 @@
 
 let 게임상황 = [] // 알을 둔 상황을 저장하는 배열
 let 승리 = '' // 이긴 알을 저장하는 변수
-let 무승부 = ''
+let 패배 = false
 
 // 1. 게임판 출력하는 함수
 function 게임판그리기(){
 	승리 = '' // 승리 변수를 공백으로 초기화
+	패배 = false
 	게임상황 = [null,null,null,null,null,null,null,null,null] // 현재 알을 둔 상황 저장 배열
+	document.getElementById('result').innerHTML = ''
 	let 게임판 = ''
 	for( let i = 0 ; i<9 ; i++ ){
 		게임판 += `<button id=${i} onclick=버튼선택(${i})>${i}</button>`
@@ -33,8 +35,18 @@ function 버튼선택(i){
 	document.getElementById(i).innerHTML = 'O' // 각 버튼 아이디값에 O표시 추가
 	게임상황[i] = 'O'
 	
-	if( 게임결과() ) { // 게임결과 함수에서 true가 리턴되면
+	if( 게임결과() && 패배 == false ) { // 게임결과 함수에서 true가 리턴되면
+		if (승리 == '무승부') {
+			alert('무승부입니다!!')
+			document.getElementById('result').innerHTML = '무승부'
+			return
+		}
 		alert('게임종료 승리 : ' + 승리)
+		if (승리 == 'O') {
+			document.getElementById('result').innerHTML = '승리'
+			console.log(승리)
+			return
+		}
 		return // 함수 강제 종료
 	}
 	
@@ -42,17 +54,25 @@ function 버튼선택(i){
 	// (Math.random() * 9 ) + 1 // 1~10 사이의 난수 발생
 	// floor 내림 round 반올림 ceil 올림
 	// alert( '난수 : ' + rand )
-	while(true) {
-		let rand = Math.floor(Math.random() * 9) // 0~8
-		if(!중복검사(rand)) { // 컴퓨터가 알이없으면 X를 표시하고 나간다.
-			document.getElementById(rand).innerHTML = 'X'
-			게임상황[rand] = 'X'
-			break
+		while(true) {
+			let rand = Math.floor(Math.random() * 9) // 0~8
+			if(!중복검사(rand)) { // 컴퓨터가 알이없으면 X를 표시하고 나간다.
+				document.getElementById(rand).innerHTML = 'X'
+				게임상황[rand] = 'X'
+				break
+			}
+			if(패배 == true) {
+				break
+			}
 		}
-	}
 	
 	if( 게임결과() ) { // 게임결과 함수에서 true가 리턴되면
-		alert('게임종료 승리 : ' + 승리)
+		if (승리 == 'X') {
+			패배 = true
+			document.getElementById('result').innerHTML = '패배'
+			console.log(승리)
+			alert('게임종료 승리 : ' + 승리)
+		}
 		return // 함수 강제 종료
 	}
 	
@@ -99,8 +119,9 @@ function 게임결과(){
 		}
 	}
 	for(let i = 0 ; i<=8 ; i++) {
-		if(게임상황[i] != null && 게임상황[i] && 게임상황[i+2] && 게임상황[i+3] && 게임상황[i+4] && 게임상황[i+5] && 게임상황[i+6] && 게임상황[i+7] && 게임상황[i+8]) {
-			alert('무승부입니다!!')		
+		if(게임상황[i] != null && 게임상황[i] && 게임상황[i+1] && 게임상황[i+2] && 게임상황[i+3] && 게임상황[i+4] && 게임상황[i+5] && 게임상황[i+6] && 게임상황[i+7] && 게임상황[i+8]) {
+//			alert('무승부입니다!!')		
+			승리 = '무승부'
 			return true // 세로 승리 나오면 함수 종료
 		}
 	}
