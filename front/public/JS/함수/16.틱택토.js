@@ -7,11 +7,13 @@
 
 let 게임상황 = [] // 알을 둔 상황을 저장하는 배열
 let 승리 = '' // 이긴 알을 저장하는 변수
+let 승리완료 = false
 let 패배 = false
 
 // 1. 게임판 출력하는 함수
 function 게임판그리기(){
 	승리 = '' // 승리 변수를 공백으로 초기화
+	승리완료 = false
 	패배 = false
 	게임상황 = [null,null,null,null,null,null,null,null,null] // 현재 알을 둔 상황 저장 배열
 	document.getElementById('result').innerHTML = ''
@@ -35,17 +37,20 @@ function 버튼선택(i){
 	document.getElementById(i).innerHTML = 'O' // 각 버튼 아이디값에 O표시 추가
 	게임상황[i] = 'O'
 	
-	if( 게임결과() && 패배 == false ) { // 게임결과 함수에서 true가 리턴되면
+	if( 게임결과() && 패배 == false || 게임결과() && 승리완료 == false ) { // 게임결과 함수에서 true가 리턴되면
 		if (승리 == '무승부') {
 			alert('무승부입니다!!')
 			document.getElementById('result').innerHTML = '무승부'
 			return
 		}
-		alert('게임종료 승리 : ' + 승리)
 		if (승리 == 'O') {
+			if (승리완료 == false) {			
+			승리완료 = true
+			alert('게임종료 승리 : ' + 승리)
 			document.getElementById('result').innerHTML = '승리'
 			console.log(승리)
 			return
+			}
 		}
 		return // 함수 강제 종료
 	}
