@@ -37,20 +37,21 @@ function 버튼선택(i){
 	document.getElementById(i).innerHTML = 'O' // 각 버튼 아이디값에 O표시 추가
 	게임상황[i] = 'O'
 	
-	if( 게임결과() && 패배 == false || 게임결과() && 승리완료 == false ) { // 게임결과 함수에서 true가 리턴되면
+	if( 게임결과() && 패배 == false ) { // 게임결과 함수에서 true가 리턴되면
 		if (승리 == '무승부') {
 			alert('무승부입니다!!')
 			document.getElementById('result').innerHTML = '무승부'
 			return
 		}
 		if (승리 == 'O') {
-			if (승리완료 == false) {			
+			if (승리완료 == false && 패배 == false) {			
 			승리완료 = true
 			alert('게임종료 승리 : ' + 승리)
 			document.getElementById('result').innerHTML = '승리'
 			console.log(승리)
 			return
 			}
+			return
 		}
 		return // 함수 강제 종료
 	}
@@ -71,7 +72,7 @@ function 버튼선택(i){
 			}
 		}
 	
-	if( 게임결과() ) { // 게임결과 함수에서 true가 리턴되면
+	if( 게임결과() && 패배 == false ) { // 게임결과 함수에서 true가 리턴되면
 		if (승리 == 'X') {
 			패배 = true
 			document.getElementById('result').innerHTML = '패배'
