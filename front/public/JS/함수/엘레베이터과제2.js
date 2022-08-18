@@ -15,11 +15,11 @@ function btn_click(i) {
 //	let index = floor.indexOf(i)
 	btn_create()
 	// 현재 위치에서 상승 할때
-	if (엘베<i) {
-		for(let 엘베 = 현재엘베 ; 엘베<i ; 엘베++) {
+	if (엘베<=i) {
+		for(let 엘베 = 현재엘베 ; 엘베<=i ; 엘베++) {
 			alert(`${i}층입니다.`)
 		if(엘베<i) {
-			if( 엘베 == i-1 ){
+			if( 엘베 == i ){
 				alert(`${i}층에 도착했습니다.`)
 				현재엘베=엘베
 			}
@@ -31,7 +31,7 @@ function btn_click(i) {
 		for(let 엘베 = 현재엘베 ; 엘베>=i ; 엘베--) {
 			alert(`${i}층입니다.`)
 		if(엘베>i) {
-			if( 엘베 == i+1 ){
+			if( 엘베 == i-1 ){
 				alert(`${i}층에 도착했습니다.`)
 				현재엘베=엘베
 			}
