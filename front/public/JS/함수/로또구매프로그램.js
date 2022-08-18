@@ -10,7 +10,7 @@ let lotto_numbers = []
 function btn_print(){
 	let btnlist = '' // 1~45의 버튼을 저장하는 변수
 	for(let i = 1 ; i<=45 ; i++) {
-		btnlist += `<button id=${i} onclick=btn_click(${i})>${i}</button>`
+		btnlist += `<button id=${i} onclick=btn_click(${i})>${i}</button><br><br>`
 		if( i % 5 == 0 ) {
 			btnlist += '<br>'
 		}
@@ -21,7 +21,6 @@ function btn_print(){
 // 2. 버튼 눌렀을때 함수
 function btn_click(i){
 	// 중복배제
-	
 	
 	let index = select_numbers.indexOf(i)
 	// 배열내 존재하는 숫자 확인
