@@ -1,0 +1,7 @@
+@charset "UTF-8";
+body {
+	background-image: url("images/bg1.png"), url("images/bg2.png");
+	background-position: left top, right top;
+	background-repeat: no-repeat;
+	text-align: center;
+}

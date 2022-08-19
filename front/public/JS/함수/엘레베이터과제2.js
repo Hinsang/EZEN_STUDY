@@ -2,56 +2,67 @@
 let btnlist = ''
 let 현재엘베 = 1
 let i = ''
+let 엘베 = null
 
 function btn_create(){
 	btnlist= ''
 	for(let i = 5 ; i>=1 ; i--) {
 		btnlist += `<div class="floor"><div>${i}층</div> <button id=btnbox${i} onclick=btn_click(${i})></button><br>`
 	}
+	document.getElementById('btnbox').innerHTML = btnlist
 	btnlist += '<br>'
+	document.getElementById('btnbox'+(현재엘베)).innerHTML = '엘베위치'
+}
+
+function btn_clear(){
 	document.getElementById('btnbox').innerHTML = btnlist
 }
 
 function btn_click(i) {
 //	let index = floor.indexOf(i)
-	btn_create() // 다시 빈버튼 생성해서 엘베버튼 없애기 
+// 다시 빈버튼 생성해서 엘베버튼 없애기 
 //	현재엘베 = 1
-	let 엘베 = ''
 	// 현재 위치에서 상승 할때
-	if (엘베<i) {
+	if (현재엘베<i) {
 		for(let 엘베 = 현재엘베 ; 엘베<=i ; 엘베++) {
 			if(엘베 != i) {
-				alert(`현재 ${엘베}층`)
-				document.getElementById('btnbox'+(i)).innerHTML = '엘베위치'
+				alert(`현재 ${현재엘베}층`)
+				document.getElementById('btnbox'+(현재엘베)).innerHTML = '엘베위치'
+				++현재엘베
+				btn_clear()
 			}
 			else{ // 위에 엘베<=i 하면 1층 더 많이 떠서 -1 해주었음
+//				현재엘베++
 				alert(`${i}층 도착!!`)
-				document.getElementById('btnbox'+(i)).innerHTML = '엘베위치'
-				현재엘베=엘베
-				console.log(엘베+'상승도착')
+				document.getElementById('btnbox'+(현재엘베)).innerHTML = '엘베위치'
+				console.log('상승도착 '+엘베)
+				console.log('상승 i '+i)
+				console.log('상승 엘베 '+엘베)
+				console.log('상승 현재엘베 '+현재엘베)
 			}
 		}
-	console.log(i+'상승i')
-	console.log(현재엘베+'상승현재엘베')
-	console.log(엘베+'상승엘베')
+		
 	}
 	
-	if (엘베>i) {
-		console.log(현재엘베+'하강현재엘베')
-		console.log(i+'하강i')
+	if (현재엘베>i) {
+		console.log('하강 i '+i)
+		console.log('하강 엘베 '+엘베)
+		console.log('하강 현재엘베 '+현재엘베)
 		for(let 엘베 = 현재엘베 ; 엘베>=i ; 엘베--) {
-			alert(`현재${엘베}층`)
-			document.getElementById('btnbox'+(i)).innerHTML = '엘베위치'
 			if( 엘베 != i ){
-				alert(`${i}층에 도착했습니다.`)
+				alert(`현재 ${현재엘베}층`)
+				document.getElementById('btnbox'+(현재엘베)).innerHTML = '엘베위치'
+				현재엘베--
+				btn_clear()
 			}
 			else {
 				alert(`${i}층 도착!!`)
-				document.getElementById('btnbox'+(i)).innerHTML = '엘베위치'
-				현재엘베=엘베
-				console.log(엘베+'하강엘베')
+				document.getElementById('btnbox'+(현재엘베)).innerHTML = '엘베위치'
 			}
 		}
+		console.log('하강 i '+i)
+		console.log('하강 엘베 '+엘베)
+		console.log('하강 현재엘베 '+현재엘베)
 	}
 	
 	// 현재 위치에서 하강 할때
