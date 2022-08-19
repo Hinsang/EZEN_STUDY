@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+}
+section {
+	scroll-snap-align: start;
+	height: 100vh; /* 뷰포트 높이 */
+	background-color: #B4B4DC;
+}
+.container {
+	scroll-snap-type: y mandatory;
+	height: 100vh;
+	background-color: #cccccc;
+	overflow: auto;
+	/* scroll-snap-type: y mandatory; */
+}
+.title {
+	font-family: 'Black Han Sans', sans-serif;
+	font-size: 50px;
+	font-style: italic;
+}
+.main {
+	background-image: url("images/notebook1.webp");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 500px;
+	padding-left: 200px;
+	width: 50%;
+	height: 100vh;
+}
+.main_inner {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 300px;
+	float: right;
+}
+.description {
+	width: 50%;
+	float: left;
+}
+
+/* 2번째 */
+
+.title2 {
+	font-family: 'Black Han Sans', sans-serif;
+	font-size: 50px;
+	font-style: italic;
+}
+
+.main2 {
+	background-image: url("images/notebook2.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 500px;
+	padding-right: 200px;
+	width: 50%;
+	height: 100vh;
+	float: left;
+}
+
+.description2 {
+	width: 50%;
+	float: right;
+}
+
+.main_inner2 {
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 300px;
+	float: left;
+}
+
+/* 3번째 */
+
+.section3 {
+	scroll-snap-align: start;
+	height: 100vh; /* 뷰포트 높이 */
+	background-color: pink;
+	scroll-snap-align: start;
+}
+
+.main3 {
+	background-image: url("images/notebook3.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 500px;
+	padding-left: 200px;
+	width: 50%;
+	height: 100vh;
+}
+
+/* @media (max-width: 700px) {
+	.title {
+		font-size: 4rem;
+		color: blue;
+	}
+} */
+
+.contactsns {
+	width: 500px;
+	display: flex;
+	scroll-snap-align: start;
+}
+
+a {
+	padding-left: 30px;
+	border: none;
+}
+
+.section3 span {
+	float: right;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
