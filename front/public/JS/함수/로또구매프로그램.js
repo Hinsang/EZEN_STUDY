@@ -10,7 +10,7 @@ let lotto_numbers = []
 function btn_print(){
 	let btnlist = '' // 1~45의 버튼을 저장하는 변수
 	for(let i = 1 ; i<=45 ; i++) {
-		btnlist += `<button id=${i} onclick=btn_click(${i})>${i}</button><br><br>`
+		btnlist += `<button id=${i} onclick=btn_click(${i})>${i}</button>`
 		if( i % 5 == 0 ) {
 			btnlist += '<br>'
 		}
