@@ -13,6 +13,7 @@ function 점수등록() {
 	kor : Number(document.getElementById('kor').value),
 	eng : Number(document.getElementById('eng').value),
 	mat : Number(document.getElementById('mat').value),
+	sums : Number(document.getElementById('kor').value) + Number(document.getElementById('eng').value) + Number(document.getElementById('mat').value)
 }
 
 	// 배열에 저장하기 전에 중복체크
@@ -107,7 +108,7 @@ function 학생출력() {
 						'<th>'+studentlist[i].kor+'</th>'+
 						'<th>'+studentlist[i].eng+'</th>'+
 						'<th>'+studentlist[i].mat+'</th>'+
-						`<th>${sum[i]}</th>`+
+						`<th>${studentlist[i].sums}</th>`+
 						`<th>${avg}</th>`+
 						'<th><button onclick="학생삭제('+i+')">삭제</button></th>'+
 					'</tr>'
