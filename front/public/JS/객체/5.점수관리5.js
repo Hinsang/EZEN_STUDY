@@ -2,6 +2,7 @@ let studentlist = []
 학생출력()
 let temp = []
 let 등수 = ''
+let sum = []
 
 function 점수등록() {
 	
@@ -11,7 +12,7 @@ function 점수등록() {
 	name : document.getElementById('name').value,
 	kor : Number(document.getElementById('kor').value),
 	eng : Number(document.getElementById('eng').value),
-	mat : Number(document.getElementById('mat').value)
+	mat : Number(document.getElementById('mat').value),
 }
 
 	// 배열에 저장하기 전에 중복체크
@@ -44,6 +45,22 @@ function 이름중복체크(name) { // 학생 이름 중복체크 함수
 	return false // 배열내 name과 동일한 이름이 없다.
 }
 
+//	function 합계() {
+//		for(let i = 0 ; i < studentlist.length ; i++) {
+//			for(let j = 1 ; j <= studentlist.length ; j++) {
+//				sum = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
+//				if(studentlist[i+1]) {
+//					sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
+//					if (sum < sum2) {
+//						temp = sum
+//						sum = sum2
+//						sum2 = temp
+//					}
+//				}
+//			}
+//		}
+//	}
+
 function 학생출력() {
 	let html = '<tr>' +
 					'<th>등수</th>'+
@@ -58,24 +75,43 @@ function 학생출력() {
 				
 	// 배열내 데이터를 하나씩 꺼내기 -> 객체 정보를 html화
 	for(let i = 0 ; i < studentlist.length ; i++) {
-		
-		let sum = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
-		let avg = sum / 3
-		
-		
-		html += '<tr>' +
-					// 내림차순으로 정렬
-					'<th>'+i+'</th>'+
-					'<th>'+studentlist[i].name+'</th>'+
-					'<th>'+studentlist[i].kor+'</th>'+
-					'<th>'+studentlist[i].eng+'</th>'+
-					'<th>'+studentlist[i].mat+'</th>'+
-					`<th>${sum}</th>`+
-					`<th>${avg}</th>`+
-					'<th><button onclick="학생삭제('+i+')">삭제</button></th>'+
-				'</tr>'
+		for(let j = 1 ; j <= studentlist.length ; j++) {			
+			if(studentlist[j]) {
+				sum[i] = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
+//				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
+				if (sum[i] < sum[j]) {
+					temp = sum[i]
+					sum[i] = sum[j]
+					sum[j] = temp
+				}
+			}
+		}
+			
+			let avg = sum[i] / 3
+			
+//			for(let j = 1 ; j <= studentlist.length ; j++) {
+//				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
+//				
+//				if (sum < sum2) {
+//					temp = sum
+//					sum = sum2
+//					sum2 = temp
+//				}
+//			}
+//			합계()
+			
+			html += '<tr>' +
+						// 내림차순으로 정렬
+						'<th>'+i+'</th>'+
+						'<th>'+studentlist[i].name+'</th>'+
+						'<th>'+studentlist[i].kor+'</th>'+
+						'<th>'+studentlist[i].eng+'</th>'+
+						'<th>'+studentlist[i].mat+'</th>'+
+						`<th>${sum[i]}</th>`+
+						`<th>${avg}</th>`+
+						'<th><button onclick="학생삭제('+i+')">삭제</button></th>'+
+					'</tr>'
 	}
-
 	document.getElementById('listtable').innerHTML = html
 }
 
@@ -85,23 +121,15 @@ function 학생삭제(i) {
 	학생출력() // HTML까지 최신화
 }
 
-//function 총점비교() {
-//	let swapped;
-//	do{
-//		swapped = false;		
-//		for(let i = 0 ; i < studentlist.length-1 ; i++) {
-//			if (studentlist[i].sum < studentlist[i+1].sum) {
-//				temp = studentlist[i].sum
-//				studentlist[i].sum = studentlist[i+1].sum
-//				studentlist[i+1].sum = temp
-//				swapped = true;
+//	function 총점비교(index) {
+//		for(let index = 0 ; index < studentlist.length-1 ; index++) {
+//			for(let j = index+1 ; j<=studentlist.length ; j++ ) {
+//				temp = studentlist[index].sum
+//				studentlist[index].sum = studentlist[j].sum
+//				studentlist[j].sum = temp
 //			}
-//			console.log(studentlist[i].sum)
 //		}
-//	}
-//	while (swapped)
-//}
-//
+
 
 //function 등수비교(id) {
 //	for(let i = 0 ; i < id-1 ; i++) {
