@@ -78,22 +78,19 @@ function 학생출력() {
 				
 	// 배열내 데이터를 하나씩 꺼내기 -> 객체 정보를 html화
 	for(let i = 0 ; i < studentlist.length ; i++) {
+		for(let j = i+1 ; j < studentlist.length ; j++) {			
+			
+//				sum[i] = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
+//				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
+				if (studentlist[i].sums < studentlist[j].sums) {
+					temp = studentlist[i]
+					studentlist[i] = studentlist[j]
+					studentlist[j] = temp
 		
-		for(let index = 0 ; index < studentlist.length ; index++) {			
-			for(let j = 1 ; j <= studentlist.length ; j++) {			
-				
-				if(studentlist[j]) {
-	//				sum[i] = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
-	//				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
-					if (studentlist[index].sums < studentlist[j].sums) {
-						temp = studentlist[index].sums
-						studentlist[index].sums = studentlist[j].sums
-						studentlist[j].sums = temp
-					}
-				}
 			}
 		}
-			
+	}
+	for(let i = 0 ; i < studentlist.length ; i++) {		
 			let avg = studentlist[i].sums / 3
 			
 //			for(let j = 1 ; j <= studentlist.length ; j++) {
@@ -109,7 +106,7 @@ function 학생출력() {
 			
 			html += '<tr>' +
 						// 내림차순으로 정렬
-						'<th>'+i+'</th>'+
+						`<th>${i+1}</th>`+
 						'<th>'+studentlist[i].name+'</th>'+
 						'<th>'+studentlist[i].kor+'</th>'+
 						'<th>'+studentlist[i].eng+'</th>'+
