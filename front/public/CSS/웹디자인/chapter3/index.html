@@ -3,7 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
-	<link href="./style.css" rel="stylesheet"></link>
+	
+	<!-- css 기본 초기화 -->
+  	<link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+   	<!-- 뷰포트 -->
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   	<!-- 구글폰트 css  -->
+   	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|M+PLUS+Rounded+1c:400,500&display=swap" rel="stylesheet">
+   	<!-- 아이콘폰트 js -->
+   	<script src="https://kit.fontawesome.com/b8a7fea4d4.js" crossorigin="anonymous"></script>
+	<!-- 본인css -->
+   	<link href="style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -32,11 +42,51 @@
 					<li> 화장실, 화장실 모래 </li>
 					<li> 식품 </li>
 				</ul>
+				
+				<ol>
+					<li>건식 사료A</li>
+					<li>습식 사료B (C배합)</li>
+					<li>건식 사료D 닭괴 맛</li>
+				</ol>
+				
+				<blockquote>
+					<p>
+						쉬고 있는 고양이의 눈은 아주 부드럽습니다.
+						적대적이지 않고 상대방에게 호의가 있을 때는 눈을 가늘게 뜨거나 깜박거립니다.
+						가끔 윙크를 할 때도 있습니다.
+					</p>
+				</blockquote>
+
+				<div class="bgbox">
+					<p>
+						쉬고 있는 고양이의 눈은 아주 부드럽습니다.
+						적대적이지 않고 상대방에게 호의가 있을 때는 눈을 가늘게 뜨거나 깜박거립니다.
+						가끔 윙크를 할 때도 있습니다.
+					</p>
+				</div>
 			</article>
+			
+			<ul class="pagination">
+				<li><a href="#" class="current">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">></a></li>
+			</ul>
+			
 		</main>
-		
+	
 		<aside>
-			..사이드 콘텐츠..
+			<div class="side_box">
+				<h3>Category</h3>
+				<ul>
+					<li><a href="#">고양이 종류</a></li>
+					<li><a href="#">식사·사료</a></li>
+					<li><a href="#">건강·질병</a></li>
+					<li><a href="#">고양이 상태</a></li>
+					<li><a href="#">고양이와 함께 사는법</a></li>
+				</ul>
+			</div>
 		</aside>
 	</div>
 

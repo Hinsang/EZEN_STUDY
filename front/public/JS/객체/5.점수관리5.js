@@ -3,6 +3,8 @@ let studentlist = []
 let temp = []
 let 등수 = ''
 let sum = []
+let avg = []
+let sums = []
 
 function 점수등록() {
 	
@@ -76,19 +78,23 @@ function 학생출력() {
 				
 	// 배열내 데이터를 하나씩 꺼내기 -> 객체 정보를 html화
 	for(let i = 0 ; i < studentlist.length ; i++) {
-		for(let j = 1 ; j <= studentlist.length ; j++) {			
-			if(studentlist[j]) {
-				sum[i] = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
-//				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
-				if (sum[i] < sum[j]) {
-					temp = sum[i]
-					sum[i] = sum[j]
-					sum[j] = temp
+		
+		for(let index = 0 ; index < studentlist.length ; index++) {			
+			for(let j = 1 ; j <= studentlist.length ; j++) {			
+				
+				if(studentlist[j]) {
+	//				sum[i] = studentlist[i].kor + studentlist[i].eng + studentlist[i].mat
+	//				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
+					if (studentlist[index].sums < studentlist[j].sums) {
+						temp = studentlist[index].sums
+						studentlist[index].sums = studentlist[j].sums
+						studentlist[j].sums = temp
+					}
 				}
 			}
 		}
 			
-			let avg = sum[i] / 3
+			let avg = studentlist[i].sums / 3
 			
 //			for(let j = 1 ; j <= studentlist.length ; j++) {
 //				sum2 = studentlist[i+1].kor + studentlist[i+1].eng + studentlist[i+1].mat
