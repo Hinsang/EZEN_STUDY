@@ -1,5 +1,42 @@
 /* 미디어쿼리 : 디바이스 크기에 따라 css 설정 */
 
+body {
+	color: #949887;
+	font-family: '굴림';
+	background-image: url("images/bg.png");
+}
+header {
+	max-width: 1000px;
+	margin: 2.5rem auto 0;
+	background-image: url("images/header.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 170px;
+}
+.page_title {
+	font-size: 35px;
+	font-family: '굴림';
+	text-align: center;
+	margin: 50px 0px;
+}
+.page_desc {
+	font-size: 15px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* ------------------------------------------------*/
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	border-radius: 0 0 10px 10px;
+}
+
+/*-------------------------------------------------*/
+
 .post_title {
 	padding-bottom : 50px;
 	background-image: linear-gradient(45deg, #fff 30%, #ccc 30%, #ccc 50%, #fff 50%, #fff 80%, #ccc 80%, #ccc 100%);

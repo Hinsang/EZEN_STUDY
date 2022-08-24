@@ -86,10 +86,10 @@ function 학생출력() {
 					temp = studentlist[i]
 					studentlist[i] = studentlist[j]
 					studentlist[j] = temp
-		
 			}
 		}
 	}
+	
 	for(let i = 0 ; i < studentlist.length ; i++) {		
 			let avg = studentlist[i].sums / 3
 			
