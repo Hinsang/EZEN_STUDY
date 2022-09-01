@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>댕댕이유치원</title>
+<link rel="stylesheet" href="../CSS/reservation.css">
+</head>
+<body>
+	<div class="wrap">
+		<div class="header_wrap">
+			<div class="header">
+				<div class="left_section">
+					<div class="logo_section"><a href="index.html">로고이미지 영역입니다</a></div>
+				</div><!-- left_section -->
+				<div class="right_section">
+					<ul class="lognin_section">
+						<li><a href="sign_in.html">로그인</a></li>
+						<li><a href="personal_data.html">회원가입</a></li>
+					</ul>				
+					<ul class="gnb">
+						<li><a href="company_info.html">소개합니다</a></li>
+						<li><a href="trainer_introduce.html">훈련사소개</a></li>
+						<li><a href="수강커리큘럼.html">커리큘럼</a></li>
+						<li><a href="reservation.html">상담신청</a></li>	
+						<li><a href="calendar.html">교육일정</a></li>
+						<li><a href="review.html">교육후기</a></li>
+						<li><a href="way_to_come.html">오시는길</a></li>							
+					</ul><!--  gnb-->
+				</div><!-- right_section -->			
+			</div><!-- header -->				
+		</div><!-- header_wrap -->
+		
+		<div class="contaeinr">
+			<div class="contaeinr_img_section">
+			
+			</div><!-- contaeinr_img_section -->
+			
+		
+			<div class="text_section">
+				<h3 class="cs_title">상담신청</h3>
+				<p class="cs_sub_text">프로그램을 위한 상담입니다. 효과적인 교육을 위해 아래사항을 자세하게 적어주세요.</p>			
+			</div><!-- text_section -->
+			
+			<div class="cs_wrap">			
+				<div class="cs_section">									
+					<div class="protector_section">
+					<h4>보호자 정보</h4>
+					
+						<div class="input_div name_section">
+							<span class="span_text">이름</span>
+							<div class="input_box">
+								<input type="text" placeholder="이름" class="input name">
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						<div class="input_div phone_section">
+							<span class="span_text">전화번호</span>
+							<div class="input_box phone_box">
+								<select class="phone_title">
+									<option class="phone_options" value="010">010</option>
+									<option class="phone_options" value="011">011</option>
+									<option class="phone_options" value="016">016</option>
+									<option class="phone_options" value="017">017</option>
+									<option class="phone_options" value="018">018</option>
+									<option class="phone_options" value="019">019</option>
+								</select> 
+								<span class="sign">-</span>
+								<input type="text" placeholder=""  class="input front_phone"> 
+								<span class="sign">-</span>
+								<input type="text" placeholder=""  class="input back_phone"> 
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						<div class="input_div e_mail_section">
+							<span class="span_text">E-mail</span>
+							<div class="input_box">
+								<input type="email"  class="input email">
+								<span class="sign">@</span>
+								<select class="email_select">
+									<option class="email_options" value="naver.com">naver.com</option>
+									<option class="email_options" value="nate.com">nate.com</option>
+									<option class="email_options" value="daum.net">daum.net</option>
+									<option class="email_options" value="gmail.com">gmail.com</option>
+									<option class="email_options" value="직접입력">직접입력</option>								
+								</select>
+							</div><!-- input_box -->						
+						</div><!-- input_div -->					
+					</div><!-- protector_section -->
+					
+					<div class="dog_section">
+					<h4>반려견 정보</h4>
+						<div class="input_div dog_name_section">
+							<span class="span_text">반려견 이름</span>
+							<div class="input_box">
+								<input type="text" placeholder="반려견 이름"  class="input dogname">
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						<div class="input_div dog_age_section">
+							<span class="span_text">반려견이 나이</span>
+							<div class="input_box">
+								<input type="text" placeholder="반려견 나이"  class="input dogage">
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						<div class="input_div dog_kind_section">
+							<span class="span_text">견종</span>
+							<div class="input_box">
+								<input type="text" placeholder="견종"  class="input dog_breed">
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						<div class="input_div dog_neutralization_section">
+							<span class="span_text">중성화 여부</span>
+							<div class="input_box neutralization_box">
+								<label>								
+									<input type="radio" name="neutralization" class="radio neutralization" value="예">예
+								</label>
+								<label>
+									<input type="radio" name="neutralization" class="radio neutralization" value="아니오">아니오
+								</label>
+								<label>
+									<input type="radio" name="neutralization" class="radio neutralization" value="모르겠음">모르겠음
+								</label>
+							</div><!-- input_box -->						
+						</div><!-- input_div -->					
+						
+						<div class="input_div dog_action_section">
+							<span class="span_text">문제행동<br> (해당되는 행동을 모두 골라주세요.)</span>
+							<div class="input_box action_section" id="id_action">
+								<input type="checkbox" name="action" class="checkbox action" value="분리불안">분리불안
+								<input type="checkbox" name="action" class="checkbox action" value="트라우마">트라우마
+								<input type="checkbox" name="action" class="checkbox action" value="사회성">사회성
+								<input type="checkbox" name="action" class="checkbox action" value="무는행동">무는행동
+								<input type="checkbox" name="action" class="checkbox action" value="공격적인 행동">공격적인 행동<br>
+								<input type="checkbox" name="action" class="checkbox action" value="짖음/낑낑거림">짖음/낑낑거림
+								<input type="checkbox" name="action" class="checkbox action" value="물건파괴/물건씹음">물건파괴/물건씹음
+								<input type="checkbox" name="action" class="checkbox action" value="배변">배변
+								<input type="checkbox" name="action" class="checkbox action" value="사료거부">사료거부
+								<input type="checkbox" name="action" class="checkbox action" value="기타등등">기타등등
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						
+						<div class="input_div dog_action_file_section">
+							<span class="span_text">문제행동을 첨부파일로 보내주세요.(jpg,png,mp4,avi)</span>
+							<div class="input_box">
+							<div class="file_box">
+								<input type="file" class="input_file">
+							</div><!-- file_box -->
+							</div><!-- input_box -->						
+						</div><!-- input_div -->
+						
+						
+						<div class="input_div dog_adoption_section">
+							<span class="span_text">반려견의 입양출처</span>
+							<div class="input_box adoption_box">
+								<label>
+									<input type="radio" name="adoption" class="radio adoption" value="펫샵">펫샵 
+								</label>
+								<label>
+									<input type="radio" name="adoption" class="radio adoption" value="지인">지인
+								</label>
+								<label>
+									<input type="radio" name="adoption" class="radio adoption" value="유기견센터">유기견센터
+								</label>
+								<label>
+									<input type="radio" name="adoption" class="radio adoption" value="기타">기타					
+								</label>
+							</div><!-- input_box -->					
+						</div><!-- input_div -->	
+						
+						
+						<div class="input_div dog_house_section">
+							<span class="span_text">반려견의 주거환경</span>
+							<div class="input_box house_box">
+								<label>
+									<input type="radio" name="house" class="radio house" value="단독주택">단독주택 
+								</label>
+								<label>
+									<input type="radio" name="house" class="radio house" value="다세대주택">다세대주택
+								</label>
+								<label>
+									<input type="radio" name="house" class="radio house" value="기타">기타												
+								</label>
+							</div><!-- input_box -->					
+						</div><!-- input_div -->	
+																
+					</div><!-- dog_section -->
+					
+					
+					
+					<div class="btn">
+						<button class="send" onclick="제출하기()">제출하기</button>				
+					</div><!-- btn -->
+					
+				</div><!-- cs_section -->
+			
+			
+			</div>
+				
+			
+			
+		
+		</div><!-- contaeinr -->
+		
+		<div class="footer_wrap">		
+			<div class="footer">
+				<ul class="top_footer">
+					<li>BMSMILE Co., Ltd.</li>
+					<li>Tel.1644-9603 |</li> 
+					<li>Email : contact@bmsmile.com |</li> 
+				</ul><!-- top_footer -->
+				<ul class="booter_footer">
+					<li>E-Commerce Registration : 2020-Seoul Gangnam-01687</li>
+					<li>Address : 4th floor, 8, Teheran-ro 44-gil, Gangnam-gu, Seoul, Republic of Korea |</li> 
+					<li>CEO : Bongsu ParkㅣPersonal Info Manager : Dongwook Lee |</li> 
+				
+				</ul><!-- booter_footer -->		
+			</div><!-- footer -->
+		</div><!-- footer_wrap -->		
+	</div><!-- wrap -->
+	<script src="../JS/reservation.js"></script>
+</body>
+</html>

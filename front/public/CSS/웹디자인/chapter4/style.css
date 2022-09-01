@@ -1,0 +1,371 @@
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+header .wapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px 10px;
+}
+.logo {
+	width: 200px;
+}
+.main_nav {
+	display: flex;
+}
+.main_nav li {
+	text-align: center;
+	font-size: 20px;
+}
+.main_nav a {
+	padding: 10px;
+	width: 50px; 
+}
+
+.main_nav a::before {
+	display: block;
+	margin-bottom: 5px;
+	font-family: 'Font Awesome 5 PRO';
+	font-weight: 900;
+}
+.menu_home::before { content: '\f015' }
+.menu_job::before { content: '\f0ca' }
+.menu_form::before { content: '\f56e' }
+
+/*-----------------------------------*/
+.btn {
+	padding: 15px 30px;
+	text-align: center;
+	font-size: 18px;
+}
+.btn_primary {
+	background-color: #000080;
+	color: white;
+}
+.btn_secondary {
+	background-color: #2d3374;
+	color: white;
+}
+.home_hero {
+	background-image: url("images/bg-hero.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: 70vw auto;
+	padding: 5.5rem 1rem 3rem;
+}
+.home_hero h2 {
+	font-family: '굴림';
+	font-size: 1.5rem;
+	background: rgba(255, 255, 255, 0.8);
+	margin: 8vw 0 12vw;
+	padding: 1rem;
+	display: inline-block;
+}
+.home_hero p {
+	font-size: 1.125rem;
+	margin-bottom: 2rem;
+}
+
+.brown_bg {
+	background-color: #f8f8f8;
+}
+
+.title {
+	line-height: 150%;
+	font-size: 30px;
+	/* border-bottom: 5px solid #cccccc;
+	margin: 2rem 0 2.5rem; */
+}
+.title::after { /* 가상 요소로 하단에 테두리 만들기 */
+	content: '';
+	display: block;
+	height: 5px;
+	width: 10rem;
+	background-color: #cccccc;
+	margin: 2rem 0 2.5rem;
+}
+
+.main {
+	max-width: 900px;
+	width: 90%;
+	margin: 100px auto;
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0 0 6px #cccccc;
+}
+
+.job_page {
+	background-image: url("images/bg-job.jpg");
+	background-repeat: no-repeat;
+	background-position: left 120px; /* 헤더 보이게 */
+	background-size: 70vw;
+}
+
+.text_center {
+	text-align: center;	
+}
+
+.text_center::after {
+	margin: 30px auto;
+}
+
+/* --------------- 테이블 --------------- */
+
+table {
+	margin: 3.5rem 0;
+	width: 100%;
+}
+th {
+	background-color: #f8f6f2;
+	padding: 1rem;
+	vertical-align: middle; /* 텍스트 세로 정렬 */
+	font-weight: normal;
+}
+td {
+	padding: 0.75rem 1rem 1.75rem;
+}
+th, td {
+	display: block;
+}
+
+/* 타임라인 */
+
+.timeline {
+	list-style: decimal inside;
+}
+.timeline_item {
+	margin-bottom: 2rem;
+}
+.timeline_title {
+	display: inline-block;
+	font-size: 20px;
+	margin-bottom: 1rem;
+}
+
+/* ------------------------------- */
+
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+input[type='url']::placeholder,
+textarea::placeholder {
+	color: #bbbbbb;
+}
+input[type='checkbox'] {
+	opacity: 0;
+	appearance: none; /*기본 스타일 제거*/
+	position: absolute;
+}
+input[type='checkbox'] + span::before{
+	display: inline-block;
+	content: '';
+	width: 1.5rem; height: 1.5rem;
+	border: 1px solid #bbbbbb;
+	background-color: white;
+	margin: -0.125rem 0.5rem 0 0;
+	vertical-align: middle;
+	
+	font-family: 'Font Awesome 5 pro';
+	font-weight: 900;
+	padding: 0 2px;
+	line-height: 1.5;
+}
+
+.select_box {
+	position: relative;
+}
+
+.select_box::after {
+	display: inline-block;
+	position: absolute;
+	top: 0.625rem; right: 1rem;
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
+	content: '\f078';
+	color: #bbbbbb;
+}
+
+input[type="checkbox"]:checked + span::before {
+	content: '\f00c';
+}
+
+.form_page {
+	background-image: url("images/bg-form.jpg");
+	background-repeat: no-repeat;
+	background-position: right 100px; /* 헤더 보이게 */
+	background-size: 70vw;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+select,
+textarea {
+	border: 1px solid #bbbbbb;
+	background-color: white;
+	padding: 10px;
+	width: 100%;
+}
+textarea {
+	height: 200px;
+}
+
+/* 푸터 */
+
+footer {
+	background-color: #000080;
+	text-align: center;
+	padding: 50px 15px;
+	color: white;
+}
+.footer_nav li {
+	margin: 15px 0px;
+}
+.footer_nav {
+	margin: 50px;
+}
+	
+@media(min-width: 600px) {
+	
+	.timeline_item {
+		display: flex;
+		margin-bottom: 0;
+	}
+	.timeline_title {
+		width: 24%;
+		text-align: right;
+		padding: 2rem 2.5rem 2rem 0;
+	}
+	.timeline_content {
+		width: 76%;
+		border-left: 5px solid #f8f6f2;
+		padding: 1.5rem 0 1.5rem 2.5rem;
+		position: relative;
+	}
+	.timeline_content::before {
+		position: absolute;
+		top: 1.5rem;
+		left: -1.5rem;
+		display: block;
+		width: 2.25rem;
+		height: 2.25rem;
+		background-color: #d0bea2;
+		text-align: center; padding: 0.1rem;
+		font-family: 'Font Awesome 5 pro';
+		font-weight: 900;
+		color: white;
+		font-size: 1.25rem;
+	}
+	.icon_file::before { content: '\f56e'; }
+	.icon_code::before { content: '\f121'; }
+	.icon_chat::before { content: '\f086'; }
+	.icon_hands::before { content: '\f2b5'; }
+	
+	.main {
+		padding: 4rem;
+	}
+	th, td {
+		display: table-cell;
+	}
+	tr:nth-child(odd) { /* 홀수 */
+		background-color: #f8f6f2;
+	}
+	tr:nth-child(even) th { /* 짝수 */
+		background-color: #ffffff;	
+	}
+	th {
+		width: 25%;
+	}
+	td {
+		width: 75%;
+	}
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4rem 1rem;
+	}
+	.flex_reverse {
+		flex-direction: row-reverse;
+	}
+	.home_text {
+		width: 50vw;	/* vw : 뷰포트 위드 반응형 크기 */
+		margin-bottom: 0;
+	}
+	.home_chart {
+		width: 35vw;
+	}
+	.home_hero {
+		padding: 16vw 1rem;
+	}
+	.home_hero h2 {
+		font-size: 2.5rem;
+		margin: 0 0 2rem;
+		background: none;
+		padding: 0;
+	}
+	.home_hero p {
+		width: 38vw;
+	}
+	.main_nav .current {
+		border-bottom: 3px solid #000080;
+		padding: 5px;
+	}
+	.main_nav a::before {
+		content: '';
+	}
+	
+	/* 푸터 */
+	
+	.footer_nav {
+		display: flex;
+		justify-content: center;
+		margin: 50px;
+	}
+	.footer_nav li {
+		margin: 0 20px;
+	}
+}
+
+.ct-label {
+	font-size: 1rem;
+	fill: #fff;
+}
+.ct-series-a .ct-slice-pie {
+	fill : #2d3374;
+}
+.ct-series-b .ct-slice-pie {
+	fill : #3a7edf;
+}
+.ct-series-c .ct-slice-pie {
+	fill : #9bcbf8;
+}
+.ct-series-d .ct-slice-pie {
+	fill : #bbbbbb;
+}
+
+.ct-series-a .ct-bar {
+	stroke: #3a7edf;
+}
+
+.ct-bar {
+	stroke-width: 16%
+}
+
+
+
+
+
+
+
+
+
+
+
