@@ -1,0 +1,41 @@
+<!DOCTYPE html>	<!-- html5 표현태그 -->
+<html>	<!-- html start -->
+	<head>	<!-- head s -->
+		<meta charset="UTF-8"> <!-- 한글인코딩 : 1.EUC-KR  2.UTF-8 -->
+		<title>Insert title here</title> <!-- 페이지 제목-->
+	</head>	<!-- head e -->
+	
+	<body> <!-- body s -->
+	
+		<!-- 
+			img : 이미지 태그 
+				[속성]
+				1. alt : 이미지 이름[텍스트]
+				2. src : 이미지 경로
+					- 절대경로 : 해당파일의 모든 경로 표시
+					- 상대경로 : 현재파일 기준으로 해당파일의 경로 표시 
+						/ 		: 경로 구분 [ 현재 파일 기준 ] 
+						../ 	: 상위로 이동 
+						../../ 	: 2번 상위로 이동
+						../폴더명/파일명
+				3. width : 사진의 가로 크기 
+						px 	: 픽셀
+						% 	: 백분율  
+		 -->
+		 	<!-- 1. 현재html 과 사진파일이 동일한 폴더에 있을경우에는 사진 파일명만 표시  -->
+		 <img alt="강아지사진설명" src="강아지.jpg" width="150px">
+		 	<!-- 2. 상위 폴더에 사진이 있을경우 -->
+		 <img alt="" src="../강아지.jpg" width="50px">
+		 	<!-- 3. 다른 폴더에 사진이 있을경우 -->
+		 <img alt="" src="../img/강아지.jpg" width="50%">
+		 	<!-- 4. 절대 경로 : 모든 경로 [ 프로젝트내 파일 경로 ] : 로컬에서 사진 호출   -->
+		 <img alt="" src="C:\Users\504t\eclipse-workspace\front\public\HTML\강아지.jpg" width="100%">
+		 	<!-- 5. 절대 경로 : 모든 경로 [ 서버내 파일 경로 ] : 웹서버에서 사진 호출   -->
+		 <img alt="" src="http://localhost:8080/front/HTML/강아지.jpg" width="100%">
+		 
+	</body> <!--  body e -->
+	
+</html> <!--  html end  -->
+
+
+

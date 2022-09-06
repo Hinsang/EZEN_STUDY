@@ -1,0 +1,124 @@
+*{padding: 0 ; margin: 0 auto;
+ font-family: 굴림;
+ line-height:120%;}
+a{text-decoration: none; color:black;}
+a:hover {color: orange;}
+li{list-style-type: none;}
+
+#header{
+	height: 100px;
+}
+.hd_box {
+	width:1200px;
+	margin: 0 auto;
+	position:relative; 
+	}
+.logo{position: absolute;
+	 top:30px; left:20px;
+	 font-weight: bold;
+	 padding-top: 3px;
+	 }
+.the {color: blue;}	 
+.topmenu {position: absolute;
+		  right:20px; top:30px;}
+.topmenu li {display: inline; 
+			margin-left: 20px;}
+	
+	
+	
+			
+#main_img {text-align: center;}
+
+
+
+#banners {width:1200px; margin: 0 auto;}
+.banner {
+		 width: 550px;
+		 float: left;
+		 margin: 50px 20px;
+		 }
+.col1 {
+		width: 100px;
+		float: left;	
+}
+.col2 {
+		width: 400px;
+		float: right;
+}
+
+
+#items {clear:both;
+		width:100%;
+		height:500px;
+		background-color:#eeeeee;
+margin: 0 auto;}
+.box1{
+	width: 1300px;
+	height: 200px;
+}
+.item img{width: 100%;}
+.item{
+	padding-top:100px;
+	 margin: 8px;
+	width:300px; float:left;}
+	
+#footer{clear:both;
+	   
+		background-color: black;
+		color: white;
+		padding: 20px;
+		height: 250px;
+}
+.box3{width:1200px}
+.ft {float: left; 	 width: 450px;margin-top: 50px;}
+.ft li{display:inline}
+.ft ul{margin-bottom: 50px;}
+.ft3 {float: right; width: 300px; margin-top: 50px; text-align: center;}
+		
+#main_con_img{background-image: url("img2/sub_intro.jpg");
+			  height: 400px;
+			  background-size:cover;
+			  text-align: center;
+			  padding-top: 300px;
+			  color: beige;
+			  font-size:17px;
+			  clear: both;
+			  }
+			  
+
+.con_coff , .con_light1{width: 1200px;}
+.con_coff img , .con_light img{ width:500px;}
+
+
+.con_coff{ height:400px; margin-top:70px;}
+.coffee{float:left; margin: 0 50px 0 50px;}
+
+.con_coff_p{
+			margin-top:10px;
+			float:left;
+			width: 520px;
+			display: inline;}
+.con_coff_p h2{margin-top:10px;
+	margin-bottom:15px;} 
+.con_coff_p li{margin-top: 30px;}
+
+
+
+
+.con_light{clear:both;
+		   background-color:#eeeeee;
+		   height:500px;}
+
+.con_light1{width:1200px;}
+.light{display: inline;
+	   float: right;
+	   margin:60px 100px 0 0;}
+	   
+.con_light_p{
+			float:left;
+			width: 520px;
+			display: inline;
+			margin: 95px 0 0 50px;
+			}
+.con_light_p h2{margin-bottom: 15px;}
+.con_light_p li{margin-top: 30px;}

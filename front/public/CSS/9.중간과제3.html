@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style type="text/css">
+	
+		h3 {
+			margin-top: 50px;
+			text-align: center;
+		}
+		.menu {
+			display: inline-block;
+			width: 120px;
+			height: 30px;
+		}
+		.menu_input {
+			height: 25px;
+			margin-bottom: 10px;
+		}
+		.button {
+		 	height: 40px;
+			margin-right: 5px;
+			float: right;
+		}
+		.inner {
+			margin: 30px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 30px;
+			border-top: 1px solid #aaa;
+			border-bottom: 1px solid #aaa;
+		}
+		
+	</style>
+
+</head>
+<body>
+	<h3>회원 가입 폼</h3>
+	<div class="inner">
+		<div class="menu">아이디</div> <input type="text" class="menu_input"> <br />
+		<div class="menu">비밀번호</div> <input type="password" class="menu_input"> <br />
+		<div class="menu">비밀번호 확인</div> <input type="password" class="menu_input"> <br />
+		<div class="menu">이름</div> <input type="text" class="menu_input"> <br />
+		<div class="menu">이메일</div> <input type="text" class="menu_input">
+			@
+			<select>
+				<option> 직접입력 </option>
+				<option> naver.com </option>
+				<option> nate.com </option>
+			</select> <br>
+			<div class="menu">이메일 수신</div> <input type="radio" name="email" checked="checked"> 비수신 <input type="radio" name="email"> 수신<br />
+			<div class="menu">가입 경로</div>
+			<input type="checkbox" name="item"> 친구추천
+			<input type="checkbox" name="item"> 인터넷검색
+			<input type="checkbox" name="item" checked="checked"> 스포츠 <br>
+			<div class="menu">인사말 </div> <textarea rows="6" cols="30"></textarea> <br>
+	</div>
+	<div style="margin-right: 50px; margin-top: -10px">
+		<input class="button" type="button" value="저장하기"><input class="button" type="button" value="취소하기">
+	</div>
+	
+
+</body>
+</html>

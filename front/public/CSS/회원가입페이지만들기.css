@@ -1,0 +1,64 @@
+* {
+	margin: 0 auto;
+}
+.title {
+	background-image: url('../img/naver.JPG');
+	background-repeat: no-repeat;
+	background-size: 200px;
+	width: 200px;
+	height: 60px;
+	margin: 30px auto;
+}
+.list {
+	display: block;
+	width: 400px;
+	height: 30px;
+	margin: 0 auto;
+}
+.box {
+	display: block;
+	width: 400px;
+	height: 30px;
+	margin: 0 auto;
+}
+.flexed {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+}
+.box2 {
+	display: block;
+	width: calc(400px / 3);
+	height: 35px;
+	margin-right: 5px;
+	box-sizing: border-box;
+}
+.select {
+	display: block;
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+}
+.inner {
+	
+}
+button {
+	display: inline-block;
+	width: 150px;
+	height: 38px;
+	color: white;
+	font-weight: 1000;
+	background-color: #03c75a;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.box3 {
+	display: inline-block;
+	width: 250px;
+	height: 35px;
+	margin-right: 5px;
+	box-sizing: border-box;
+	text-align: center;
+}

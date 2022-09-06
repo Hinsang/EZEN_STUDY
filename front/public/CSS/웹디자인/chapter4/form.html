@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- css 기본 초기화 -->
+   <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+   <!-- 뷰포트 -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- 구글폰트 css  -->
+   <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+   <!-- 아이콘폰트 js -->
+   <script src="https://kit.fontawesome.com/3367894b6f.js" crossorigin="anonymous"></script>
+   <!-- 아이콘폰트 js -->
+   <script src="https://kit.fontawesome.com/b8a7fea4d4.js" crossorigin="anonymous"></script>
+   <!-- chartlist.css -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+   <!-- 사용자정의 css -->
+   <link href="style.css" rel="stylesheet">
+</head>
+<body class="form_page">
+	<header>
+		<div class="wapper">
+			<h1>
+				<a href="index.html"><img class="logo" src="images/logo.svg"></a>
+			</h1>
+			
+			<nav>
+				<ul class="main_nav">
+					<li><a class="menu_home" href="./index.html">홈</a></li>
+					<li><a class="menu_job" href="job.html">모집요강</a></li>
+					<li><a class="current menu_form" href="form.html">지원</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	<section class="main"> <!-- 본문 -->
+      <h2 class="title text_center"> 지원 폼 </h2>
+      <p> 하기 지원 폼에 모든 정보를 입력 한 뒤 전송 버튼을 눌러주세요.<br>
+         ※파일 첨부는 불가능합니다. 포트폴리오 파일은 있는 경우 반드시 업로드한 URL를 기입하기 바랍니다.
+      </p>
+      <table>   
+         <tr> <th> 성명 </th> <td> <input type="text" placeholder="예 : 유재석"> </td> </tr>
+         <tr> <th> 영문명 </th> <td> <input type="text" placeholder="예 : Yu jae-seok"> </td> </tr>
+         <tr> <th> 메일주소 </th> <td> <input type="email" placeholder="예 : hello@example.com"> </td> </tr>
+         <tr> <th> 포트폴리오 </th> <td> <input type="url" placeholder="예 : http://example.com"> </td> </tr>
+         <tr> 
+            <th> 희망 근무지 </th> 
+            <td>
+	            <label>
+	            	<input type="checkbox"><span>도쿄</span>
+	            </label>
+	            <label>
+	            	<input type="checkbox"><span>오사카</span>
+	            </label>
+	            <label>
+	            	<input type="checkbox"><span>원격 근무</span>
+	            </label>
+	       	</td> 
+         </tr>
+         <tr> <th> 현재 상태 </th>
+            <td>
+            	<div class="select_box">
+	               <select name="current_position">
+	                  <option value="재직중">재직중</option>
+	                  <option value="프리랜서">프리랜서</option>
+	                  <option value="학생">학생</option>
+	                  <option value="휴직중">휴직중</option>
+	               </select>
+               </div>
+            </td>
+         </tr>
+         <tr>
+            <th> 자기 소개 </th> <td> <textarea placeholder="예 : 본인 자기소개"></textarea> </td>
+         </tr>
+      </table>
+      <p class="text_center">
+         <input type="submit" onclick="지원자등록()" value="전송" class="btn btn_primary">
+      </p>
+   </section>
+   
+   <section class="main"> <!-- 본문 -->
+		<h2 class="title text_center"> 지원자 목록 [ 과제 ] </h2>
+		<table>	
+			<tr>
+				<th> 성명 </th> <th> 영문명 </th> <th> 메일주소 </th> 
+				<th> 포트폴리오 </th> <th> 희망근무지 </th> <th> 현재 상태 </th> 
+			</tr>
+		</table>
+	</section>
+
+	<footer>
+		<a href="job.html" class="btn btn_secondary">모집요강 확인</a>
+		<ul class="footer_nav">
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">서비스 내용</a></li>
+			<li><a href="#">스태프 블로그</a></li>
+			<li><a href="#">문의사항</a></li>
+		</ul>
+	</footer>
+	
+	<script src="script.js" type="text/javascript"></script>
+</body>
+</html>

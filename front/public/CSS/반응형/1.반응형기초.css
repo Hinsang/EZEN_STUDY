@@ -1,0 +1,15 @@
+*{
+	border: 1px solid red;
+	box-sizing: border-box;
+}
+#header{
+	padding: 30px;
+}
+#menu{
+	width: 30%;
+	float: left;
+}
+#main{
+	width: 70%;
+	float: right;
+}

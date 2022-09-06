@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<head>
+<style type="text/css">
+
+* {
+	font-size: 30px;
+	font-weight: bold;
+}
+button {
+	width: 300px;
+	height: 100px;
+	margin: 10px;
+	font-size: 40px;
+	box-shadow: 3px 3px 2px gray;
+}
+
+span {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	border: 1px solid black;
+}
+.btn4 {
+	width: 100px;
+	height: 30px;
+	margin: 10px;
+}
+#btnbox {
+	flex-wrap: wrap;
+	display: flex;
+}
+.flex_inner {
+/* 	flex-wrap: wrap; */
+	display: flex; 
+	align-items: center;
+}
+.floor_btn {
+	font-size: 40px;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	font-size: 40px;
+	box-shadow: 3px 3px 2px gray;
+	border: 1px solid black;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: flex;
+}
+.floor {
+	display: flex;
+	flex-wrap: wrap;
+	width: 400px;
+	align-items: center;
+}
+
+
+</style>
+</head>
+
+<body>
+	<button onclick="btn_create()" id="floor_btn">
+	엘베타기
+	</button>
+	
+	<div style="display: flex;">
+		
+		<br><br>
+		<div id="btnbox"></div>
+		<div class="flex_inner">
+<!-- 			<button class="floor_btn">▲</button> -->
+<!-- 			<button class="floor_btn">▼</button> -->
+		</div>
+	</div>
+	
+		
+	<script src="엘레베이터과제2.js" type="text/javascript"></script>
+</body>
+</html>

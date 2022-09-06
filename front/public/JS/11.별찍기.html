@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+		출력 console(*) 
+		문제1) 입력받은 수 만큼 별 출력 
+		문제2) 입력받은 수 만큼 별 출력 [ 조건 : 5개마다 줄바꿈 ]
+		문제3) 입력받은 줄수 만큼 별 출력 [ 만약에 5 를 입력했을때 ]
+			*
+			**
+			***
+			****
+			*****
+		문제4) 입력받은 줄수 만큼 별 출력
+			*****
+			****
+			***
+			**
+			*
+		문제5) 입력받은 줄수 만큼 별 출력
+			    *
+			   **
+			  ***
+			 ****
+			*****
+		문제6) 입력받은 줄수 만큼 별 출력
+			*****
+			 ****
+			  ***
+			   **
+			    *
+		문제7) 입력받은 줄수 만큼 별 출력
+			    *
+			   ***
+			  *****
+			 *******
+			*********
+		문제8) 입력받은 줄수[홀수] 만큼 별 출력
+			 *   *
+			  * *
+			   *
+			  * *
+			 *   *
+	 -->
+
+	<script type="text/javascript">
+		
+		// 문제 1
+		let 문제1 = Number(prompt('1.별의 갯수를 입력하세요 : '))
+		let output = ''
+		
+		for(let i = 1 ; i <= 문제1 ; i++) {
+			output += '*'
+		}
+		console.log(output)
+		
+		// 문제 2
+		let 문제2 = Number(prompt('2.별의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 1 ; i<=문제2 ; i++){
+			output += '*'
+			if(i % 5 == 0) {
+				output += '\n'
+			}
+		}
+		console.log(output)
+		
+		// 문제 3
+		let 문제3 = Number(prompt('3.줄의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 1 ; i<=문제3 ; i++) {
+			for(let s = 1 ; s<=i ; s++){ // 별의 갯수는 줄수 이하
+				output += '*'
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+		// 문제 4
+		let 문제4 = Number(prompt('4.줄의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 1 ; i<=문제4 ; i++) { // 열이라고 생각하자
+			for(let s = 문제4 ; i<=s ; s--){ // 행이라고 생각하자
+				output += '*'
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+		// 문제 5
+		let 문제5 = Number(prompt('5. 줄의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 0 ; i<문제5 ; i++) {
+			for(let s = 1 ; s < 문제5-i ; s++) {
+				output += ' '
+			}
+			for(let s = 0 ; s <= i ; s++) {
+				output += '*'
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+		// 문제 6
+		let 문제6 = Number(prompt('6. 줄의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 0 ; i<문제6 ; i++) {
+			for(let s = 0 ; s<i ; s++) {
+				output += ' '				
+			}
+			for(let s = 0 ; s<문제6-i ; s++) {
+				output += '*'
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+		// 문제 7
+		let 문제7 = Number(prompt('7. 줄의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 0 ; i < 문제7 ; i++) { // 줄수 만큼 열 반복
+			for(let s = 1 ; s < 문제7-i ; s++) { // i만큼 각줄마다 별이 출력되므로 출력되는 별만큼 i를 빼준다.
+				output += ' '
+			}
+			for(let s = 0 ; s < i*2+1 ; s++) { // 삼각형 오른쪽 부분이 추가로 박히는 부분이므로 i*2+1 한만큼 별이 박혀야되니까
+				output += '*'
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+		// 문제 8
+		let 문제8 = Number(prompt('8. 줄의 갯수를 입력하세요[홀수] : '))
+		output = ''
+		for(let i = 1 ; i <= 문제8 ; i++) { // 줄수 만큼 열 반복
+			for(let s = 1 ; s <= 문제8 ; s++) { // i만큼 각줄마다 별이 출력되므로 출력되는 별만큼 i를 빼준다.
+				if(i == s) {
+					output += '*'
+				} else if((i+s) == (문제8+1)){ // 여기서 중첩부분이 하나로 찍힘
+					output += '*'
+				} else {
+					output += ' '
+				}
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+		/* if(i == 입력값 && s == 입력값) {
+				for(let i = 입력값 ; 0 < 입력값 ; i--) {
+					output += ' '
+				}
+				for(let s = 입력값 ; 0 < i*2+1 ; s--) {
+					output += '*'
+				}
+		} */
+				
+		/* for(let i = 입력값 ; i >= 1 ; i--) {
+			for(let s = 1 ; s<=입력값-i ; s++) {
+				output2 += ' '
+			}
+			for(let s = 1 ; s <= i*2-1 ; s++) {
+				output2 += '*'
+			}
+		} */
+		
+		// 문제 9
+		let 입력값 = Number(prompt('9. 줄의 갯수를 입력하세요 : '))
+		output = ''
+		for(let i = 0 ; i < 입력값 ; i++) { // 줄수 만큼 열 반복
+			for(let s = 1 ; s < 입력값-i ; s++) { // i만큼 각줄마다 별이 출력되므로 출력되는 별만큼 i를 빼준다.
+				output += ' '
+			}
+			for(let s = 0 ; s < i*2+1 ; s++) { // 삼각형 오른쪽 부분이 추가로 박히는 부분이므로 i*2+1 한만큼 별이 박혀야되니까
+				output += '*'
+			}
+			output += '\n'
+		}
+		
+		for(let i = 0 ; i<입력값 ; i++) {
+			for(let s = 0 ; s<i+1 ; s++) {
+				output += ' '				
+			}
+			for(let s = 0 ; s<(입력값-1)*2-(i*2+1) ; s++) { // 입력값-1부터 1,3,5,7,9를 뺀다
+				output += '*'
+			}
+			output += '\n'
+		}
+		console.log(output)
+		
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+ul li::before {
+	
+	content: '\f004';
+	font-family: "Font Awesome 5 pro";
+	color: #f66;
+	font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="엘레베이터과제.css" type="text/css"></link>
+<style type="text/css">
+
+* {
+	font-size: 30px;
+	font-weight: bold;
+}
+button {
+	width: 300px;
+	height: 100px;
+	margin: 10px;
+	font-size: 40px;
+	box-shadow: 3px 3px 2px gray;
+}
+
+span {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+	border: 1px solid black;
+}
+.btn4 {
+	width: 100px;
+	height: 30px;
+	margin: 10px;
+}
+
+</style>
+</head>
+<!-- <body style="background-color: black; color: white"> -->
+	
+<!-- 	<div> -->
+<!-- 		<h3>현재 엘레베이터 위치 : ???</h3> -->
+<!-- 	</div> -->
+	
+<!-- 	<div style="display:flex;"> -->
+<!-- 	<div style="width: 300px;"> -->
+<!-- 		<h3>내 위치 : ???</h3> -->
+<!-- 		<button onclick="increase()" style="width: 50px; height: 100px">상승</button> -->
+<!-- 		<button onclick="descent()" style="width: 50px; height: 100px">하강</button> -->
+<!-- 	</div> -->
+<!-- 	</div> -->
+<!-- 	<div style="margin: 100px;"> -->
+<!-- 		<div style="width: 80px; height: 100px; background-color: #dddddd">엘레베이터</div> -->
+<!-- 	</div> -->
+<!-- 	<script src="엘레베이터과제.js" type="text/javascript"></script> -->
+<!-- </body> -->
+<body>
+
+	<div style="display: flex; margin: 50px;">
+		<div style="width: 400px; height: 600px;">
+			<div style="display: flex; align-items: center;">
+				<div>5층</div><button onclick="btn5()" id="floor5"></button>
+			</div>
+			<div style="display: flex; align-items: center;">
+				<div>4층</div><button onclick="btn4()" id="floor4"></button>
+			</div>
+			<div style="display: flex; align-items: center;">
+				<div>3층</div><button onclick="btn3()" id="floor3"></button>
+			</div>
+			<div style="display: flex; align-items: center;">
+				<div>2층</div><button onclick="btn2()" id="floor2"></button>
+			</div>
+			<div style="display: flex; align-items: center;">
+				<div>1층</div><button onclick="btn1()" id="floor1"></button>
+			</div>
+		</div>
+		
+		<div style="flex-wrap: wrap; width: 100px; margin-top: 180px;">
+			<button style="width: 120px;" onclick="상승()">▲</button>
+			<button style="width: 120px;" onclick="하강()">▼</button>
+		</div>
+	</div>
+	
+	<script src="엘레베이터과제.js" type="text/javascript"></script>
+</body>
+</html>

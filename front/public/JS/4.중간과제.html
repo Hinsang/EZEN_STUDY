@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		// 문제1 : prompt 함수로 금액을 입력받아서 지폐 새기
+			// 예) 356789 입력했을경우
+			// 결과 예상 출력 [ console.log ]
+			// 각각 십만원: 몇장, 만원: 몇장 console.log찍기
+			
+		const money = prompt('십만원 단위 금액을 입력하세요.')
+		console.log('십만원 : ' + money[0] + '장')
+		console.log('만원 : ' + money[1] + '장')
+		console.log('천원 : ' + money[2] + '장')
+		console.log('백원 : ' + money[3] + '장')
+		console.log('십원 : ' + money[4] + '장')
+		console.log('일원 : ' + money[5] + '장')
+		
+		// 선생님 답 : parseInt((금액/100000)) // 나눗셈에서 정수만 추출
+		// 금액 -= parseInt(금액/100000*100000) // 십만원권 빼기
+		// 금액 -= parseInt(금액/10000*10000)
+		
+			
+		// 문제2 : prompt 함수로 반지름 입력받아 원 넓이 출력
+			// 원 넓이 공식 : 반지름 * 반지름 * 원주율(3.14)
+			
+		const area = prompt('반지름을 입력하세요.')
+		console.log('원의 넓이는 ' + (area * area * 3.14) + '입니다.')
+			
+		// 선생님 답 : 위와 같음
+		
+		
+		// 문제3 : prompt 함수로 숫자를 입력받아 3의 배수인지 체크
+			// 결과 예상 출력
+				// 3의 배수이면 true 출력 / 아니면 false
+			
+		const number = prompt('숫자를 입력하세요.')
+		const multiple = number && number % 3
+		
+		if (multiple == 0) {
+			console.log('이 숫자는 3의 배수입니다.')
+		} else {
+			console.log('이 숫자는 3의 배수가 아닙니다.')
+		}
+		
+		// 선생님 답 : console.log('3배수 체크 : ' + (정수 % 3 == 0)) 
+			
+			
+		// 문제4 : prompt 함수로 숫자를 입력받아 입력받은 값이 홀수인지 체크
+			// 결과 예상 출력
+				// 홀수이면 true 출력 / 짝수이면 false
+			
+		const sniffling = prompt('숫자를 입력하세요.')
+		const result = sniffling && sniffling % 2
+		if (result == 0) {
+			console.log('이 값은 짝수입니다.')
+		} else {
+			console.log('이 값은 홀수입니다.')
+		}
+			
+		// 선생님 답 : console.log('홀수 체크: ' + (정수 % 2 == 1))
+			
+		
+		// 문제5 : 두 실수를 입력받아 앞실수의 값이 뒤 실수의 값의 몇% 인지 출력하기
+			// 예) 54.5 84.3 이면 결과 : 64.~~%
+			
+		const number1 = prompt('첫번째 실수를 입력하세요.')
+		const number2 = prompt('두번째 실수를 입력하세요.')
+		const number3 = number1 / number2
+		
+		console.log('앞실수는 뒷실수의 값의' + (number3 * 100) + '% 입니다.')
+		
+		// 선생님 답 : console.log('실수2의 실수1 백분율 : ' + ( 실수1/실수2 * 100))
+		
+	</script>
+
+</body>
+</html>

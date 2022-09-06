@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		const input = Number( prompt('숫자를 입력하세요') )
+		
+		switch ( input % 2 ) {
+			case 0 :
+				alert('짝수입니다.')
+				break
+			case 1 :
+				alert('홀수입니다.')
+				break
+			default :
+				alert('숫자가 아닙니다.')
+		}
+		
+		if (input % 2 == 0) {
+			alert('짝수입니다.')
+		} else if (input % 2 == 1) {
+			alert('홀수입니다.')
+		} else {
+			alert('숫자가 아닙니다.')
+		}
+		
+		// 국어, 영어, 수학 점수 입력받아서 평균이 90점 이상 A등급
+		// 80점 이상 B등급, 그 이하는 탈락
+
+		const score = Number( prompt('국어 점수를 입력하세요.') )
+		const score2 = Number( prompt('영어 점수를 입력하세요.') )
+		const score3 = Number( prompt('수학 점수를 입력하세요.') )
+		const sum = (score + score2 + score3) / 3
+		
+		
+		switch (parseInt(sum / 10)) { // 논리가 안먹히니까 앞자리만 가지고 판단한다.
+			case 9 :
+				alert('A등급 입니다.')
+				break
+			case 8 :
+				alert('B등급 입니다.')
+				break
+			default:
+				alert('탈락입니다.')
+		}
+		
+		const result = (input % 2 == 0) ? '짝수입니다.' : '홀수입니다.'
+				alert( result )
+		
+	</script>
+	
+</body>
+</html>

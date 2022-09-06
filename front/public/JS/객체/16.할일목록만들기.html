@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>할 일 목록</h1>
+	<input id="todo">
+	<button id="add-button">추가하기</button>
+	<div id="todo-list">
+	
+	</div>
+</body>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', () => {
+			// 문서 객체를 가져옵니다.
+			const input = document.querySelector('#todo')
+			// 요소를 찾아서 변수에 넣습니다.
+			const todoList = document.querySelector('#todo-list')
+			// 요소를 찾아서 변수에 넣습니다.
+			const addButton = document.querySelector('#add-button')
+			// 요소를 찾아서 변수에 넣습니다.
+			
+			// 변수를 선언합니다.
+			let keyCount = 0
+			
+			// 함수를 선언합니다.
+			const addTodo = () => {
+				// 입력 양식에 내용이 없으면 추가하지 않습니다.
+				if(input.value.trim() === '') {
+					// input 값에서 양쪽여백을 제외한 값이 공백이면
+					alert('할 일을 입력해주세요.')
+					// 할 일을 입력하라는 경고창을 띄운다.
+					return
+					// 함수 종료
+				}
+
+			// 문서 객체를 설정합니다.
+			const item = document.createElement('div')
+			// 문서 안에 요소를 생성해서 변수에 넣습니다.
+			const checkbox = document.createElement('input')
+			// 문서 안에 요소를 생성해서 변수에 넣습니다.
+			const text = document.createElement('span')
+			// 문서 안에 요소를 생성해서 변수에 넣습니다.
+			const button = document.createElement('button')
+			// 문서 안에 요소를 생성해서 변수에 넣습니다.
+			
+			// 문서 객체를 식별할 키를 생성합니다.
+			const key = keyCount
+			// 글을 추가할때마다 객체를 1씩 추가하면서 변수에 저장합니다.
+			keyCount += 1
+			
+			// item 객체를 조작하고 추가합니다.
+			item.setAttribute('data-key', key)
+			// 생성한 div요소에 data-key값 안에 요소식별을 위해서 key값을 넣습니다.
+			item.appendChild(checkbox)
+			// item의 자식요소에 checkbox 변수요소를 넣습니다.
+			item.appendChild(text)
+			// item의 자식요소에 text 변수요소를 넣습니다.
+			item.appendChild(button)
+			// item의 자식요소에 button 변수요소를 넣습니다.
+			todoList.appendChild(item)
+			// 정리된 item 요소를 전체 todoList에 추가합니다.
+			
+			// checkbox 객체를 조작합니다.
+			checkbox.type = 'checkbox'
+			// checkbox의 타입을 checkbox input의 타입을 checkbox로 변환합니다.
+			checkbox.addEventListener('change', (event) => {
+				item.style.textDecoration
+					= event.target.checked ? 'line-through' : ''
+			})
+			// checkbox가 값이 변경되면 item 요소에 text-decoration 속성을 줍니다.
+			// 그러면서 checked가 되어있으면 line-thorugh 속성으로 취소선을 긋고 안되있으면 아무효과도 안줍니다.
+			
+			// text 객체를 조작합니다.
+			text.textContent = input.value
+			// text안에 input의 값을 추가합니다.
+			
+			// button 객체를 조작합니다.
+			button.textContent = '제거하기'
+			// button 안에 제거하기 글씨를 띄웁니다.
+			
+			button.addEventListener('click', () => {
+				removeTodo(key)
+			})
+			// button이 눌리면 removeTodo 함수를 실행시키고 인자값으로 각각의 key값을 넘겨줍니다.
+			
+			// 입력 양식의 내용을 비웁니다.
+			input.value = ''
+		}
+		
+		const removeTodo = (key) => {
+			// 식별 키로 문서 객체를 제거합니다.
+			const item = document.querySelector(`[data-key="${key}"]`)
+			// 위에서 지정한 <div data-key="숫자">를 item에 저장합니다.
+			todoList.removeChild(item)
+			// removeChild를 써서 자식요소 제거
+		}
+			
+		// 이벤트 연결
+		addButton.addEventListener('click', addTodo)
+		// addButton을 누르면 추가합니다.
+		input.addEventListener('keyup', (event) => {
+			// 입력 양식에서 Enter 키를 누르면 바로 addTodo() 함수를 호출합니다.
+			const ENTER = 13
+			// 16진수 엔터 키코드값은 13입니다.
+			if(event.keyCode === ENTER) {
+				// 엔터를 입력받으면
+				addTodo()
+				// 글을 추가합니다.
+			}
+		})
+	})
+	
+	</script>
+</html>

@@ -1,0 +1,26 @@
+.container {
+	overflow: auto;
+	scroll-snap-type : y mandatory; /* 어느 지점에서든 다음 영역으로 빠르게 움직인다. */
+	/* scroll-snap-type : y proximity; 경계썬 근처로 왔을때 부드럽게 이동한다. */
+	height: 100vh;
+}
+
+.area {
+	/* scroll-snap-align: start; 자식요소 멈추는 기준점 start 영역의 시작하는 지점에서 스크롤 멈춤*/
+	/* scroll-snap-align: end; 끝지점 스크롤 멈춤 */
+	scroll-snap-align: center; /* 중간지점에 오도록 스크롤 멈춤 */
+	height: 70vh;
+}
+
+.area:nth-child(1) {
+	background-color: red;
+}
+.area:nth-child(2) {
+	background-color: blue;
+}
+.area:nth-child(3) {
+	background-color: black;
+}
+.area:nth-child(4) {
+	background-color: orange;
+}

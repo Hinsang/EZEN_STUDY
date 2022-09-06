@@ -1,0 +1,26 @@
+.main_menu {
+	display: flex;
+	justify-content: center;
+}
+.main_menu a{
+	padding: 1rem;
+	margin: 1rem;
+}
+.has_menu {
+	position: relative;
+}
+.sub_menu {
+	position: absolute;
+	top: 4.5rem;
+	left: 1rem;
+	display: none;
+	display: inline inline-block block flex none;
+}
+.sub_menu a{
+	margin: 1px;
+	width: 180px;
+}
+
+.main_menu:hover {
+	display: block;
+}

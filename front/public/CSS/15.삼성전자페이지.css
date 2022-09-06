@@ -1,0 +1,62 @@
+.app-header {
+	height: 100px;
+	border: 1px solid red;
+	display: flex;
+}
+.main_logo {
+	width: 200px;
+	border: 1px solid red;
+	margin-right: 200px;
+}
+.nav_bar {
+	float: left;
+	width: 800px;
+	display: flex;
+}
+a {
+	margin-right: 20px;
+	border: 1px solid red;
+}
+.main-visual {
+	display: flex;
+	border: 1px solid red;
+	height: 500px;
+	align-items: center;
+	justify-content: center;
+}
+.box1 {
+	border: 1px solid red;
+	height: 300px;
+}
+.box2 {
+	display: flex;
+	border: 1px solid red;
+	height: 800px;
+	justify-content: center;
+}
+.menu {
+	border: 1px solid red;
+	width: 600px;
+	height: 500px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.list {
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+}
+.arrow_area {
+	border: 1px solid red;
+	height: 200px;
+	width: 10%;
+	float: left;
+	box-sizing: border-box;
+}
+.txt {
+	border: 1px solid red;
+	height: 200px;
+	width: 80%;
+	float: left;
+	box-sizing: border-box;
+}

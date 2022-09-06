@@ -1,0 +1,158 @@
+a {
+	color: black;
+	text-decoration: none;
+}
+body{
+	background-color: #f5f6f7;
+}
+*:focus{	/* 커서(포커스)가 있을경우 테두리 제거 */
+	outline: none;
+}
+.image {
+	height: 50px;
+	margin-top: 40px;
+	padding: 20px;
+}
+
+/* 레이아웃 */
+.main_signup {
+	width: 460px;
+	margin: 0 auto;
+	text-align: center;
+}
+h3 {
+	text-align: left;
+	font-size: 14px;
+	font-family: '돋음'
+}
+.signup_input {
+	display: flex;
+	padding: 10px;
+	border: solid #dadada 1px;
+	background-color: #ffffff;
+}
+#signup_id, #signup_pw, #signup_rpw {
+	height: 30px;
+	border: none;
+	width: 100%;
+}
+.signup_at {
+	font-size: 15px;
+	margin-top: 5px;
+	color: #8e8e8e;
+}
+.signup_lock {
+	width: 24px;
+	height: 24px;
+	background-image: url("https://static.nid.naver.com/images/ui/join/m_icon_pw_step.png");
+	background-size: 125px 75px;
+	margin-top: 5px;
+	top: 50%;
+	right: 10px;
+}
+
+#signup_name, #signup_gender, #signup_email, #signup_country, #signup_phone, #signup_num {
+	width: 100%;
+	height: 30px;
+	border: none;
+}
+.birthbox {
+	display: flex;
+}
+.signup_input_birth {
+	display: block;
+	width: 100%;
+	height: 50px;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	padding: 10px;
+	border: solid 1px #dadada;
+}
+#signup_birth_yy, #signup_birth_mm, #signup_birth_dd {
+	width: 120px;
+	height: 30px;
+	border: none;
+}
+.choice {
+	display: flex;
+}
+.choice span {
+	font-size: 13px;
+	font-family: '돋움';
+	margin-top: 17px;
+	color: #8e8e8e;
+}
+
+.phonebox {
+	display: flex;
+	margin: 10px 0;
+}
+.phoneinput {
+	width: 100%;
+}
+.signup_btn {
+	height: 52px;
+	background-color: #03c75a;
+	margin: 2px 0 0 10px;
+	line-height: 50px;
+}
+#num_btn {
+	width: 120px;
+	background-color: #03c75a;
+	border: none;
+	color: #ffffff;
+	font-size: 15px;
+}
+
+.signup_btn_wrap {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	background-color: #03c75a;
+	height: 52px;
+	line-height: 50px;
+}
+#signup_btn {
+	width: 100%;
+	background-color: #03c75a;
+	border: none;
+	color: #ffffff;
+	font-size: 18px;
+}
+#disabledbox{
+	background-color: #fafafa;
+}
+.ft_box {
+	font-size: 10px;
+}
+a:hover {
+	color: #03c75a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

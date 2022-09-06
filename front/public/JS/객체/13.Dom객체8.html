@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input id="inchbox" type="text">inch <br>
+	<button id="inchbtn">계산</button>
+	<p id="inchp"></p>
+	
+	<input id="emailbox" type="text">
+	<p id="emailp"></p>
+	
+	<select multiple id="selectbox2"> <!-- 복수 선택 -->
+		<option selected>떡볶이</option>
+		<option>순대</option>
+		<option selected>오뎅</option>
+		<option>튀김</option>
+	</select>
+	<p id="selectp2">선택 : 떡볶이</p>
+	
+	<input id="cminput" type="text"> cm = 
+	<span id="cmspan"></span>
+	<select id="cmselect">
+		<option value="10">mm</option>
+		<option value="0.01">m</option>
+		<option value="0.393701">inch</option>
+	</select>
+			
+	<br>
+	<br>
+	<input id="timerinput" type="checkbox">
+	<span id="timerspan">타이머 활성화</span>
+	<h1 id="timerh1"></h1>
+	
+	<!-- name값 동일해야 단일선택 -->
+	<h3># 좋아하는 애완동울을 선택해주세요.</h3>
+	<input type="radio" name="pet" value="강아지">
+	<span>강아지</span>
+	<input type="radio" name="pet" value="고양이">
+	<span>고양이</span>
+	<input type="radio" name="pet" value="햄스터">
+	<span>햄스터</span>
+	<input type="radio" name="pet" value="기타">
+	<span>기타</span>
+	<h3 id="output"></h3>
+	
+	<script src="13.Dom객체8.js" type="text/javascript"></script>
+	
+</body>
+</html>
