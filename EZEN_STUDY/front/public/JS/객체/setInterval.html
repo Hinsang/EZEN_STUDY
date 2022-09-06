@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<img src="./images/1.png" id="main" alt="" style="width:800px;height:600px;">
+
+<script>
+
+let myImage = document.getElementById("main")
+let array = ["./images/1.png","./images/2.jpg","./images/3.jpg","./images/4.jpg"]
+let index = 0;
+
+function changeImage(){
+	myImage.setAttribute("src", array[index])
+		index++;
+	if(index >= array.length){
+		index = 0;
+	}
+}
+
+setInterval(changeImage,1000)
+
+</script>
+</body>
+</html>
