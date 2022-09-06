@@ -115,6 +115,7 @@ public class EX3_틱택토게임 {
 					break;	// 조건 해당 안되면 break로 while문 빠져나옴
 				}
 				
+				// 컴퓨터 차례에 play가 true일때만 난수 발생
 				if(play == true) {					
 					while( true ) { // while 2
 						// 컴퓨터 난수 발생 ---------------------------
