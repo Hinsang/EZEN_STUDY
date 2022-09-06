@@ -200,6 +200,7 @@ public class EX3_틱택토게임 {
 					
 					break;	// 조건 해당 안되면 break로 while문 빠져나옴
 				}
+				
 			} // while 1 end
 		} // while 0 end
 	}	
