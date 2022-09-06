@@ -61,7 +61,7 @@ public class EX5_학생점수관리 { // class s
 					// 확인 
 					int rank = 0;
 					for( int value : scores ) {
-						System.out.println( (rank+1)+"순위 점수 : "+ value );
+						System.out.println( (rank+1)+"순위 점수 : "+ value ); // score 배열 반복
 						rank++;
 					}
 				} 
