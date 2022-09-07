@@ -56,7 +56,7 @@ public class 비회원제게시판 {
 					}
 				} else if ( btn == 2 ) { // btn이 2라면 글보기를 선택한다.
 					for(int row = 0 ; row<boardlist.length ; row++) { // 총 배열의 길이까지 반복한다.
-						if(boardlist[row][0] == null) { // 각 배열의 값이 비어있다면
+						
 							System.out.println("---------------게시물 상세페이지--------------");
 							
 							System.out.println("게시물 번호(인덱스) 선택 : ");
@@ -115,7 +115,6 @@ public class 비회원제게시판 {
 								}
 								break; // 처음으로 돌아가기
 							}
-						}
 					}
 					break; // for문 나가고 while문 밖으로 나간다.
 				}
