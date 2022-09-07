@@ -8,13 +8,7 @@ public class 비회원제게시판 {
 		String[][] boardlist = new String[100][4];
 		Scanner scanner = new Scanner(System.in);
 		
-		
-		
 		while(true) {
-			
-//			for(int i = 0 ; i<boardlist.length ; i++) {
-//				
-//			}
 			System.out.println("-------------커뮤니티------------");
 			System.out.println("번호	작성자	제목");
 			// 처음 시작할때 리스트들을 출력한다. 없으니까 출력안됨
@@ -57,10 +51,6 @@ public class 비회원제게시판 {
 										System.out.println(i + "\t" + boardlist[i][2] + "\t" + boardlist[i][0]);
 									}
 								}
-	//					System.out.println("title : " + boardlist[row][0]);
-	//					System.out.println("content : " + boardlist[row][1]);
-	//					System.out.println("writer : " + boardlist[row][2]);
-	//					System.out.println("password : " + boardlist[row][3]);*/
 							break; // 출력하고 빠져나간다.
 						}
 					}
@@ -92,13 +82,14 @@ public class 비회원제게시판 {
 									boardlist[boardpick][2] = null;
 									boardlist[boardpick][3] = null;
 								
+									// i부터 최대 인덱스까지 반복하면서 값 대입 (마지막에 null 땡겨옴)
 									for(int i = boardpick ; i<boardlist.length-1 ; i++) { // 최대 인덱스 넘으면 에러나서 -1 해주었음
 										boardlist[i][0] = boardlist[i+1][0];
 										boardlist[i][1] = boardlist[i+1][1];
 										boardlist[i][2] = boardlist[i+1][2];
 										boardlist[i][3] = boardlist[i+1][3];
 											
-										if( boardlist[i+1] == null ) break;
+										if( boardlist[i+1] == null ) break; // 마지막 i+1이 비워지면 for문을 나감
 									}
 								} else {
 									System.out.println("잘못된 비밀번호 입니다.");
@@ -122,12 +113,11 @@ public class 비회원제게시판 {
 								} else {
 									System.out.println("잘못된 비밀번호 입니다.");
 								}
-								break;
+								break; // 처음으로 돌아가기
 							}
-							break;
 						}
 					}
-					break;
+					break; // for문 나가고 while문 밖으로 나간다.
 				}
 			}
 		}
