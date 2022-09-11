@@ -315,8 +315,6 @@ public class 도서대여프로그램 {
 									}
 								}
 								
-								
-								
 								if(returnbookcheck == 1) {
 									System.out.println("자신이 빌린 책만 반납할 수 있습니다.");
 								}
