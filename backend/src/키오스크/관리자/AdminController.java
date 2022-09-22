@@ -21,7 +21,7 @@ public class AdminController {
 	boolean inProduct( String pname , int pprice , String pcomment 
 			, short pamount , byte mno  ) {
 		ProductDTO dto = new ProductDTO( 0 , pname, pprice, pcomment, pamount, mno);
-		return AdminDAO.getInstance().inProduct( dto  );
+		return AdminDAO.getInstance().inProduct( dto );
 	}
 	// 4. 주문 확인 로직 
 	void getOrder( ) { }
